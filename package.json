@@ -7,6 +7,6 @@
     "node": ">=20"
   },
   "scripts": {
-    "vercel:dev": "npx --yes vercel@latest dev --local"
+    "vercel:dev": "node scripts/dev.js"
   }
 }
