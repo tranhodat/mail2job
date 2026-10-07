@@ -1,0 +1,5 @@
+{
+  "rewrites": [{ "source": "/api/auth/:a", "destination": "/api/auth?a=:a" }],
+  "crons": [{ "path": "/api/cron", "schedule": "0 1 * * *" }],
+  "functions": { "api/*.js": { "maxDuration": 60 } }
+}

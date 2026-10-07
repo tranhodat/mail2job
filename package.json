@@ -1,0 +1,12 @@
+{
+  "name": "mail-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Trợ lý Gmail + Điểm tin công nghệ (Vercel serverless, không cần dependency)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "vercel:dev": "npx --yes vercel@latest dev --local"
+  }
+}
