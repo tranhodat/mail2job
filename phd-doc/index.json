@@ -1,5 +1,23 @@
 [
   {
+    "id": "51f245b8-b1bb-4338-b63e-54440c2b2585",
+    "title": "Giấy báo trúng tuyển NCS",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:28:44.164Z",
+    "updatedAt": "2026-10-08T09:28:44.164Z",
+    "files": [
+      {
+        "id": "bf4d5afd-81bd-468b-894b-fc0753bc6e31",
+        "name": "1. GBTT Tiến sĩ năm 2023 đợt 2 - DAT.pdf",
+        "type": "application/pdf",
+        "size": 1944300,
+        "sha": "d5657858824e7da5d8aab29323c84deb6be6f2bc",
+        "path": "phd-doc/files/51f245b8-b1bb-4338-b63e-54440c2b2585/bf4d5afd-81bd-468b-894b-fc0753bc6e31.pdf"
+      }
+    ]
+  },
+  {
     "id": "491f96b0-13b4-4ac9-9f08-2c33ed1661b9",
     "title": "Quyết định Công nhận nghiên cứu sinh",
     "number": "",
