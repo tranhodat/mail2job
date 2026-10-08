@@ -35,6 +35,9 @@ Tạo một repository GitHub đã có ít nhất một commit và token có quy
 4. Thêm biến môi trường theo `.env.example` (`GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `SESSION_SECRET`, `CRON_SECRET`, `GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO`, cùng thông tin Upstash Redis). Không cần cấu hình khóa AI. Không đặt `BASE_URL` để Vercel tự nhận domain.
 5. Deploy, mở domain và đăng nhập Google.
 
+### Sửa lỗi Google OAuth trên Vercel
+Đặt `BASE_URL` trong Vercel → Settings → Environment Variables thành origin HTTPS, ví dụ `https://mail2job.vercel.app`, không thêm `/api/auth/callback`. Trong Google Cloud Console → APIs & Services → Credentials, mở đúng OAuth Client ID đang đặt trên Vercel và thêm Authorized redirect URI chính xác `https://mail2job.vercel.app/api/auth/callback`. Mở ứng dụng bằng cùng domain rồi deploy lại sau khi đổi biến môi trường.
+
 ## Lưu ý
 - **Lịch gửi**: cron hiện chạy mỗi ngày một lần trên gói Hobby (`vercel.json`, 01:00 UTC), nên thư hẹn giờ được gửi ở lần cron kế tiếp. Nút **Gửi thư** gửi ngay.
 - Quyền Gmail thuộc nhóm nhạy cảm: ở chế độ *Testing* dùng được tối đa 100 người; muốn công khai cần Google xác minh ứng dụng.

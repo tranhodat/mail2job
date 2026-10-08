@@ -3,11 +3,13 @@ module.exports = U.h(async (req, res) => {
   const a = req.query.a, redir = U.base() + '/api/auth/callback';
   const secure = U.base().startsWith('https://') ? '; Secure' : '';
   if (a === 'login') {
+    if (!E.GOOGLE_CLIENT_ID || !E.GOOGLE_CLIENT_SECRET) return res.status(500).send('Thiếu GOOGLE_CLIENT_ID hoặc GOOGLE_CLIENT_SECRET trong cấu hình môi trường.');
     const st = require('crypto').randomBytes(16).toString('hex');
     res.setHeader('Set-Cookie', `st=${st}; Path=/; HttpOnly${secure}; SameSite=Lax; Max-Age=600`);
     return res.redirect(302, 'https://accounts.google.com/o/oauth2/v2/auth?' + new URLSearchParams({ client_id: E.GOOGLE_CLIENT_ID, redirect_uri: redir, response_type: 'code', access_type: 'offline', prompt: 'consent', state: st, scope: 'openid email profile https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.compose' }));
   }
   if (a === 'callback') {
+    if (!E.GOOGLE_CLIENT_ID || !E.GOOGLE_CLIENT_SECRET) return res.status(500).send('Thiếu GOOGLE_CLIENT_ID hoặc GOOGLE_CLIENT_SECRET trong cấu hình môi trường.');
     if (!req.query.code || req.query.state !== U.cookie(req, 'st')) return res.status(400).send('Phiên đăng nhập không hợp lệ');
     const t = await (await fetch('https://oauth2.googleapis.com/token', { method: 'POST', body: new URLSearchParams({ code: req.query.code, client_id: E.GOOGLE_CLIENT_ID, client_secret: E.GOOGLE_CLIENT_SECRET, redirect_uri: redir, grant_type: 'authorization_code' }) })).json();
     if (!t.access_token) return res.status(400).send('Không đăng nhập được với Google');
