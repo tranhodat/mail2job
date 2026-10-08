@@ -131,7 +131,7 @@
   {
     "id": "4a8557af-f406-425a-9378-e54bb1f68288",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:41:47.439Z",
+    "updatedAt": "2026-10-08T08:41:52.721Z",
     "title": "An Explainable AI-Based Breast Cancer Classification Combining Rule Sets and Deep Neural Networks",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Vinh-Phong Nguyen; Anh-Cang Phan",
     "venue": "International Conference on Computational Collective Intelligence",
@@ -182,6 +182,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/7c3c371e-71ec-4d26-9158-b86e44a6a4e5/ICCCI - ID 113 (1).pptx",
         "size": 8880044
+      },
+      {
+        "id": "90d895dd-8f2d-47e8-935e-a0c4038d3535",
+        "name": "ID 113.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/90d895dd-8f2d-47e8-935e-a0c4038d3535/ID 113.pdf",
+        "size": 1725373
       }
     ]
   },
