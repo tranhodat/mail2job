@@ -67,7 +67,7 @@
   {
     "id": "7acda50d-abaf-4828-a975-404d26e6e1f8",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:57:04.275Z",
+    "updatedAt": "2026-10-08T08:57:11.008Z",
     "title": "Weight-Optimized Ensemble Deep Learning for Accurate Mammographic Image Classification",
     "authors": "Ho Dat Tran; Anh Cang Phan; Long Hien Ho; Thuong Cang Phan",
     "venue": "International Conference on Computational Intelligence in Engineering Science",
@@ -110,6 +110,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/2c45917e-f5c7-4dbb-ba98-d63aa3315c62/84_Ho Dat TRAN.pdf",
         "size": 2810462
+      },
+      {
+        "id": "f1fcfab3-a50f-40d5-8be3-f026ad2da4e4",
+        "name": "1025_QĐ cử NCS tham dự và báo cáo tại Hội thảo_Trần Hồ Đạt.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/f1fcfab3-a50f-40d5-8be3-f026ad2da4e4/1025_QĐ cử NCS tham dự và báo cáo tại Hội thảo_Trần Hồ Đạt.pdf",
+        "size": 2727674
       }
     ]
   },
