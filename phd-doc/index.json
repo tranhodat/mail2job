@@ -1,5 +1,23 @@
 [
   {
+    "id": "3d3d3466-baa2-4b6a-9fdd-3a682aca9a6d",
+    "title": "Biên bản họp tiểu luận tổng quan",
+    "number": "",
+    "category": "Văn bản",
+    "createdAt": "2026-10-08T09:21:49.944Z",
+    "updatedAt": "2026-10-08T09:21:49.944Z",
+    "files": [
+      {
+        "id": "addc6b4a-9815-488f-9445-fb90cac68cc2",
+        "name": "BIEN BAN HOP TLTQ-NCS Tran Ho Dat.pdf",
+        "type": "application/pdf",
+        "size": 323995,
+        "sha": "ed1baf196b6189354797b4c16bf00b224e1d10ca",
+        "path": "phd-doc/files/3d3d3466-baa2-4b6a-9fdd-3a682aca9a6d/addc6b4a-9815-488f-9445-fb90cac68cc2.pdf"
+      }
+    ]
+  },
+  {
     "id": "6e007076-b579-4c8b-b1fc-da8be2a05153",
     "title": "Biên bản họp chuyên đề 2",
     "number": "",
