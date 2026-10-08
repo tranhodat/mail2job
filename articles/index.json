@@ -244,7 +244,7 @@
   {
     "id": "75818eaa-77d6-436e-8011-4f638d0de901",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:43:00.841Z",
+    "updatedAt": "2026-10-08T08:43:45.153Z",
     "title": "Automatic Segmentation of Masses on Mammograms Using Fuzzy Logic",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Vinh-Phong Nguyen; Anh-Cang Phan",
     "venue": "International Conference on Intelligent Systems and Data Science",
@@ -295,6 +295,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/370507a4-eaf8-488b-9c70-dfee53a5af60/SLIDE ID1721.pptx",
         "size": 8804971
+      },
+      {
+        "id": "72498789-f275-42df-ab1b-0ead69215ab9",
+        "name": "ID 1721 -  Automatic segmentation.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/72498789-f275-42df-ab1b-0ead69215ab9/ID 1721 -  Automatic segmentation.pdf",
+        "size": 3903335
       }
     ]
   },
