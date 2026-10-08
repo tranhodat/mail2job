@@ -2,7 +2,7 @@
   {
     "id": "fca78acb-981e-42b0-8ca1-e477cfbd167d",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:52:28.236Z",
+    "updatedAt": "2026-10-08T08:52:32.645Z",
     "title": "Explainable Artificial Intelligence (Xai) for The Detection and Segmentation of Mass on Mammograms using Deep Learning Techniques",
     "authors": "Ho Dat Tran; Thuong Cang Phan; Vinh Phong Nguyen; Tri Nghia Phu; Anh Cang Phan",
     "venue": "IMEDS",
@@ -29,6 +29,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/755cedde-7cf0-4728-898c-71685e125889/663059_1_En_63_Chapter_Author (1).pdf",
         "size": 2688225
+      },
+      {
+        "id": "ea082e71-7ba2-4477-b9f5-da21a52d7ee4",
+        "name": "EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI) FOR THE DETECTION AND SEGMENTATION OF MASS ON MAMMOGRAMS USING DEEP LEARNING TECHNIQUE.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/ea082e71-7ba2-4477-b9f5-da21a52d7ee4/EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI) FOR THE DETECTION AND SEGMENTATION OF MASS ON MAMMOGRAMS USING DEEP LEARNING TECHNIQUE.pdf",
+        "size": 1037858
       }
     ]
   },
