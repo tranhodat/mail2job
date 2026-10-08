@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1acd2fb1-e55e-46d2-a641-b3db9245deb3",
+    "title": "Biên bản họp đánh giá giữa kỳ",
+    "number": "",
+    "category": "Văn bản",
+    "createdAt": "2026-10-08T09:19:20.250Z",
+    "updatedAt": "2026-10-08T09:19:20.250Z",
+    "files": [
+      {
+        "id": "4726b59d-0192-4d41-8433-665d6c5ffa94",
+        "name": "BIEN BAN HOP DANH GIA GIUA KY - TRAN HO DAT.pdf",
+        "type": "application/pdf",
+        "size": 13675411,
+        "sha": "539f07ce18b6702b416a1f7a0ef84bcde759a12c",
+        "path": "phd-doc/files/1acd2fb1-e55e-46d2-a641-b3db9245deb3/4726b59d-0192-4d41-8433-665d6c5ffa94.pdf"
+      }
+    ]
+  }
+]
