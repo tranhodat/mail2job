@@ -1,5 +1,23 @@
 [
   {
+    "id": "7ed7df6d-7b18-4973-af26-27aade66c25b",
+    "title": "Quyết định Hội đòng bảo vệ KLTN (CTU)",
+    "number": "",
+    "category": "Giấy tờ khác",
+    "createdAt": "2026-10-08T09:29:20.270Z",
+    "updatedAt": "2026-10-08T09:29:20.270Z",
+    "files": [
+      {
+        "id": "e67e9186-ffbe-4cf6-b64f-a2753e7ad002",
+        "name": "QD_Thanh-lap-Hoi-dong-bao-ve_LVTN_HK3_2024-2025_khoaMMT-TT.pdf",
+        "type": "application/pdf",
+        "size": 2456412,
+        "sha": "db4058009945fa0ee4e9a1e40252ddacc2d45f66",
+        "path": "phd-doc/files/7ed7df6d-7b18-4973-af26-27aade66c25b/e67e9186-ffbe-4cf6-b64f-a2753e7ad002.pdf"
+      }
+    ]
+  },
+  {
     "id": "51f245b8-b1bb-4338-b63e-54440c2b2585",
     "title": "Giấy báo trúng tuyển NCS",
     "number": "",
