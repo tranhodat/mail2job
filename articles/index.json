@@ -77,6 +77,14 @@
         "type": "image/png",
         "path": "articles/files/4bbfa5cb-b916-4311-ba14-047f21fde3e1/1ac90e27-83bb-4349-bee8-d90249c6941c/Cover.png",
         "size": 454431
+      },
+      {
+        "id": "37b6534a-bc82-4c8a-9ffe-50e7b6e9f0ec",
+        "name": "Muc luc.PNG",
+        "role": "evidence",
+        "type": "image/png",
+        "path": "articles/files/4bbfa5cb-b916-4311-ba14-047f21fde3e1/37b6534a-bc82-4c8a-9ffe-50e7b6e9f0ec/Muc luc.PNG",
+        "size": 253038
       }
     ]
   },
