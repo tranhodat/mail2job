@@ -1,5 +1,23 @@
 [
   {
+    "id": "491f96b0-13b4-4ac9-9f08-2c33ed1661b9",
+    "title": "Quyết định Công nhận nghiên cứu sinh",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:28:30.785Z",
+    "updatedAt": "2026-10-08T09:28:30.785Z",
+    "files": [
+      {
+        "id": "837fda03-1bf0-4e66-975b-9df8809438ac",
+        "name": "2. QĐ 5981 CÔNG NHẬN NCS - TRAN HO DAT.pdf",
+        "type": "application/pdf",
+        "size": 7557386,
+        "sha": "f097679476c04b6abddd3fe97afe58c2e26867a9",
+        "path": "phd-doc/files/491f96b0-13b4-4ac9-9f08-2c33ed1661b9/837fda03-1bf0-4e66-975b-9df8809438ac.pdf"
+      }
+    ]
+  },
+  {
     "id": "b23888bf-7869-4efe-a00f-33813c5b8fc6",
     "title": "Quyết định Giao chuyên đề & TLTQ",
     "number": "",
