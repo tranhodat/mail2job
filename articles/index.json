@@ -239,6 +239,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/a66ecd62-e259-4d31-aff3-1b055dc8db88/ID 1721 - Response.pdf",
         "size": 145327
+      },
+      {
+        "id": "030dc57f-01f3-47ea-93fd-ee620952456b",
+        "name": "AUTOMATIC SEGMENTATION OF MASSES ON MAMMOGRAM USING FUZZY LOGIC.rar",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/030dc57f-01f3-47ea-93fd-ee620952456b/AUTOMATIC SEGMENTATION OF MASSES ON MAMMOGRAM USING FUZZY LOGIC.rar",
+        "size": 5917483
       }
     ]
   },
