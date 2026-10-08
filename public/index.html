@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Trợ lý Gmail</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📬</text></svg>">
-<style>
+<link rel="stylesheet" href="/articles.css"><style>
 :root{--bg:#f6f8fc;--card:#fff;--tx:#202124;--mu:#5f6368;--bd:#dadce0;--ac:#0b57d0;--blue:#1a73e8;--amber:#b06000;--green:#188038;--red:#d93025;--vi:#0b57d0}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 Arial,"Segoe UI",sans-serif}
 .ic{width:18px;height:18px;flex:none;vertical-align:-3px}
@@ -108,12 +108,13 @@ main{padding:calc(18px + env(safe-area-inset-top)) 14px 90px}.split{grid-templat
 <button data-v="inbox" class="on"><span data-i="mail"></span>Hộp thư</button>
 <button data-v="tasks"><span data-i="list"></span>Công việc</button>
 <button data-v="documents"><span data-i="file"></span>Documents</button>
+<button data-v="articles"><span data-i="news"></span>Bài báo</button>
 <button data-v="stats"><span data-i="chart"></span>Thống kê</button>
 <button data-v="news"><span data-i="news"></span>Tin công nghệ</button>
 <div class="me"><img id="pic" alt=""><span id="em"></span><a href="/api/auth/logout" title="Đăng xuất" data-i="out"></a></div></aside>
 <main id="main"></main></div><div id="toast" class="toast hide"></div>
 <dialog id="send-confirm" class="confirm-dialog"><div class="dialog-head"><h2>Xác nhận gửi thư</h2><button type="button" data-close-send aria-label="Đóng">×</button></div><div class="dialog-body"><p>Bạn có chắc muốn gửi thư này không?</p><div class="note"><b>Người nhận</b><div id="confirm-recipients" style="overflow-wrap:anywhere;margin-top:4px"></div></div></div><div class="dialog-foot"><button type="button" data-close-send>Hủy</button><button type="button" class="p" id="confirm-send-yes">Đồng ý</button></div></dialog>
-<dialog id="doc-dialog" class="doc-dialog"></dialog>
+<dialog id="doc-dialog" class="doc-dialog"></dialog><dialog id="article-dialog" class="doc-dialog article-dialog"></dialog><script src="/vendor/xlsx.full.min.js"></script><script src="/articles.js"></script>
 <script>
 const $=s=>document.querySelector(s);
 const I={mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',mailRead:'<path d="m22 7-10 6L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/>',mailUnread:'<path d="M4 5h16a2 2 0 0 1 2 2v1l-10 6L2 8V7a2 2 0 0 1 2-2Z" fill="currentColor" stroke="none"/><path d="M2 8v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8"/>',list:'<path d="m3 17 2 2 4-4M3 7l2 2 4-4M13 6h8M13 12h8M13 18h8"/>',news:'<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/>',clip:'<path d="m21.4 11-9.2 9.2a6 6 0 0 1-8.5-8.5l8.6-8.6a4 4 0 0 1 5.6 5.7l-8.5 8.5a2 2 0 0 1-2.9-2.8l8.5-8.5"/>',send:'<path d="m22 2-7 20-4-9-9-4zM22 2 11 13"/>',play:'<path d="m6 3 14 9-14 9z"/>',clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',user:'<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',plus:'<path d="M12 5v14M5 12h14"/>',spark:'<path d="m12 3 1.9 5.8L20 10l-6.1 1.2L12 17l-1.9-5.8L4 10l6.1-1.2z"/>',out:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',x:'<path d="M18 6 6 18M6 6l12 12"/>',check:'<path d="M20 6 9 17l-5-5"/>',alert:'<circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/>',chart:'<path d="M3 3v18h18M7 15v3M12 9v9M17 5v13"/>',trash:'<path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/>',file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6"/>'};
@@ -131,7 +132,7 @@ const email=f=>(f.match(/<(.+)>/)||[0,f])[1],nm=f=>f.split("<")[0].replace(/"/g,
 function status(t){if(t.completed)return["Hoàn thành","var(--green)"];if(t.error)return["Lỗi","var(--red)"];return[["Đã lên lịch","var(--blue)"],["Đang xử lý","var(--vi)"],["Đang xử lý","var(--vi)"],["Sẵn sàng gửi","var(--blue)"],["Đã gửi","var(--green)"]][t.step]}
 const chip=(t,c,i)=>`<span class="chip" style="--c:${c}">${i?ic(i):""}${esc(t)}</span>`;
 async function go(v){S.v=v;document.querySelectorAll("aside button").forEach(b=>b.classList.toggle("on",b.dataset.v==v));$("#main").innerHTML='<p class="sub">Đang tải…</p>';
-try{if(v=="inbox"){if(!S.mails.length)S.mails=await api("/api/mails");inbox()}if(v=="tasks"){S.tasks=await api("/api/tasks");tasks()}if(v=="documents"){S.documents=await api("/api/documents");documents()}if(v=="stats"){S.tasks=await api("/api/tasks");stats()}if(v=="news"){S.news=await api("/api/news");news()}}catch(e){if(e.message!="401")$("#main").innerHTML=`<div class="card empty">${ic("alert")} ${esc(e.message)}</div>`}}
+try{if(v=="articles"){A.items=(await api("/api/articles")).items;articles()}if(v=="inbox"){if(!S.mails.length)S.mails=await api("/api/mails");inbox()}if(v=="tasks"){S.tasks=await api("/api/tasks");tasks()}if(v=="documents"){S.documents=await api("/api/documents");documents()}if(v=="stats"){S.tasks=await api("/api/tasks");stats()}if(v=="news"){S.news=await api("/api/news");news()}}catch(e){if(e.message!="401")$("#main").innerHTML=`<div class="card empty">${ic("alert")} ${esc(e.message)}</div>`}}
 function inbox(){const m=S.mails.find(x=>x.id==S.sel);let files=[];
 $("#main").innerHTML=`<div class="top"><div><h1>Hộp thư</h1><p class="sub">${S.mails.length} thư gần đây</p></div><button id="refresh">${ic("play")}Làm mới</button></div><div class="split"><div class="card inbox-list">${S.mails.map(x=>`<div class="mail ${x.unread?"unread":"read"} ${x.id==S.sel?"sel":""}" data-id="${x.id}"><span class="mail-state ${x.unread?"unread":"read"}" title="${x.unread?"Chưa đọc":"Đã đọc"}">${ic(x.unread?"mailUnread":"mailRead")}</span><div><b>${esc(x.sub)}</b><small>${esc(nm(x.from))} ${x.att.length?"· "+x.att.length+" tệp":""}</small><small>${esc(x.snippet)}</small></div></div>`).join("")||'<div class="empty">Hộp thư trống</div>'}</div>
 <div>${m?`<div class="card"><h2>${esc(m.sub)}</h2><div class="sub" style="margin:0 0 8px">${ic("user")} ${esc(m.from)}</div><pre>${esc(m.body||m.snippet)}</pre><div style="margin-top:8px">${m.att.map(a=>chip(a,"var(--blue)","clip")).join("")}</div></div>

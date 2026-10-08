@@ -42,3 +42,12 @@ Tạo một repository GitHub đã có ít nhất một commit và token có quy
 - **Lịch gửi**: cron hiện chạy mỗi ngày một lần trên gói Hobby (`vercel.json`, 01:00 UTC), nên thư hẹn giờ được gửi ở lần cron kế tiếp. Nút **Gửi thư** gửi ngay.
 - Quyền Gmail thuộc nhóm nhạy cảm: ở chế độ *Testing* dùng được tối đa 100 người; muốn công khai cần Google xác minh ứng dụng.
 - Refresh token được mã hóa AES-256-GCM bằng `SESSION_SECRET` trước khi lưu. Nội dung thư gốc không được lưu; nội dung trả lời và tệp đính kèm được lưu trong Redis để gửi hoặc xử lý theo lịch.
+
+### Bài báo nghiên cứu
+Menu **Bài báo** nằm ngay dưới Documents. Hỗ trợ tìm kiếm, sắp xếp, xem bảng/thẻ, thêm/sửa/xóa, nhập/xuất `.xlsx` và tải mẫu Excel. Hộp thoại có bốn tab: thông tin chung (điền từ BibTeX Google Scholar), minh chứng, mã nguồn, ghi chú Markdown và ảnh. Dữ liệu lưu tại `articles/index.json`, tệp tại `articles/files/` trong cùng repository đã cấu hình cho Documents. Gỡ tệp hoặc xóa bài báo giữ nguyên bản tệp trên GitHub.
+
+Mỗi tệp tối đa **20 MB**, tải theo phần 2 MB; cần Redis đã cấu hình để lưu tạm các phần (hết hạn sau một giờ). Nếu tải tệp lỗi, thông tin bài báo đã lưu vẫn được giữ và có thể bấm lưu để thử tiếp. Excel chứa nội dung văn bản, không chứa tệp đính kèm. Nhập Excel tạo các bài báo mới, không ghi đè bài cũ; tối đa 500 bài/lần. Thư viện SheetJS 0.20.3 được lưu tại `public/vendor/xlsx.full.min.js` (Apache-2.0).
+
+Documents trên màn hình rộng tối đa 700 px hiển thị ba cột: tên văn bản, dung lượng và thao tác.
+
+Kiểm tra chức năng bằng `node scripts/check-articles.js` (GitHub/Redis giả lập, không ghi dữ liệu thật).
