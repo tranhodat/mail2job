@@ -165,7 +165,16 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "699c0d39-28f1-4d1c-b561-f314eb7ade57",
+        "name": "DAT PHONG.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/699c0d39-28f1-4d1c-b561-f314eb7ade57/DAT PHONG.pdf",
+        "size": 81261
+      }
+    ]
   },
   {
     "id": "0cb29d91-5a0d-48a0-981a-2a3bb70cc269",
