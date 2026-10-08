@@ -166,6 +166,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/d575595b-f337-4b50-a42f-1055916eec9a/5874_QD tham du hoi thao-ICCCI 2025.pdf",
         "size": 835411
+      },
+      {
+        "id": "1b7bfc2b-ede6-4ea8-8fce-1306fd61d2d6",
+        "name": "GIAY CHUNG NHAN.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/1b7bfc2b-ede6-4ea8-8fce-1306fd61d2d6/GIAY CHUNG NHAN.pdf",
+        "size": 428285
       }
     ]
   },
