@@ -107,7 +107,7 @@
   {
     "id": "e4c3c756-2d12-46d4-8e18-2fbaec2024fa",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:44:52.169Z",
+    "updatedAt": "2026-10-08T08:45:04.540Z",
     "title": "Breast Cancer Classification Based on Fuzzy Rules and Deep Learning Techniques",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Vinh-Phong Nguyen; Anh-Cang Phan",
     "venue": "International Conference on Computational Intelligence in Engineering Science",
@@ -166,6 +166,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/54dc701a-c60b-403b-9507-bbfbf7faf23c/ICCIES - TDT - 2025.pptx",
         "size": 6350080
+      },
+      {
+        "id": "92a9894c-bda1-4458-b964-3d2b8e27508d",
+        "name": "ICCIES2025_161_Ho Dat TRAN - LATEX.rar",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/92a9894c-bda1-4458-b964-3d2b8e27508d/ICCIES2025_161_Ho Dat TRAN - LATEX.rar",
+        "size": 5354780
       }
     ]
   },
