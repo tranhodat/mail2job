@@ -1,5 +1,23 @@
 [
   {
+    "id": "10ce8e11-ff7d-470e-bef1-ca453876efe3",
+    "title": "Quyết định Hội đồng chấm chuyên đề 1",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:26:48.553Z",
+    "updatedAt": "2026-10-08T09:26:48.553Z",
+    "files": [
+      {
+        "id": "c3a4d0b3-a080-4976-b355-0aee63292bf4",
+        "name": "7. QD 6581 HOI DONG CHAM CD 1 Tran Ho Dat.pdf",
+        "type": "application/pdf",
+        "size": 794356,
+        "sha": "56bc85e8bd40ca232016ce41703312079038ef00",
+        "path": "phd-doc/files/10ce8e11-ff7d-470e-bef1-ca453876efe3/c3a4d0b3-a080-4976-b355-0aee63292bf4.pdf"
+      }
+    ]
+  },
+  {
     "id": "c2348cdc-9f65-4908-bf32-8dc2ec81da22",
     "title": "Quyết định Hội đồng chấm chuyên đề 2",
     "number": "",
