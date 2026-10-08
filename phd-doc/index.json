@@ -1,5 +1,23 @@
 [
   {
+    "id": "39db62ad-67a5-4dcc-80d4-7df4715db9d1",
+    "title": "Quyết định Hội đồng đánh giá ĐCCT",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:27:37.766Z",
+    "updatedAt": "2026-10-08T09:27:37.766Z",
+    "files": [
+      {
+        "id": "9a93210d-2656-4243-b374-2400fb3d63ad",
+        "name": "5. QĐ 1603 HOI DONG DANH GIA ĐCCT Trần Hồ Đạt.pdf",
+        "type": "application/pdf",
+        "size": 1697017,
+        "sha": "bd2c45a4ea90f3b69851df633b4267bb61823363",
+        "path": "phd-doc/files/39db62ad-67a5-4dcc-80d4-7df4715db9d1/9a93210d-2656-4243-b374-2400fb3d63ad.pdf"
+      }
+    ]
+  },
+  {
     "id": "a28ae063-6319-451f-8b15-574f943a13b2",
     "title": "Quyết định Hội đồng chấm Tiểu luận tổng quan",
     "number": "",
