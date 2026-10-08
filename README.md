@@ -11,7 +11,9 @@
 api/auth.js    đăng nhập Google (login, callback, logout, me)
 api/mails.js   danh sách thư
 api/tasks.js   tạo / gửi / hoàn thành / xóa công việc
-api/documents.js lưu hồ sơ và tệp trong repository GitHub
+api/documents.js lưu Documents trong repository GitHub
+api/phd-doc.js lưu PhD-Doc trong thư mục riêng
+lib/document-store.js API dùng chung cho hai kho tài liệu
 api/news.js    quản lý nguồn + đọc RSS/Atom và bài viết
 api/cron.js    chạy các công việc đã đến giờ (Vercel Cron)
 lib/util.js    mã hóa, Redis và Gmail
@@ -26,7 +28,7 @@ public/index.html  giao diện
 5. Mở `http://localhost:3000` và đăng nhập Google.
 
 ### Lưu Documents trên GitHub
-Tạo một repository GitHub đã có ít nhất một commit và token có quyền **Contents: Read and write** chỉ trên repository đó, sau đó đặt `GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO` và `GITHUB_BRANCH` trong `.env.local` hoặc Vercel Environment Variables. API lưu tệp riêng tư qua máy chủ; token không được gửi xuống trình duyệt. Mỗi hồ sơ hỗ trợ tối đa 10 tệp, tổng cộng 3 MB do giới hạn payload serverless.
+Tạo một repository GitHub đã có ít nhất một commit và token có quyền **Contents: Read and write** chỉ trên repository đó, sau đó đặt `GITHUB_TOKEN`, `GITHUB_OWNER`, `GITHUB_REPO` và `GITHUB_BRANCH` trong `.env.local` hoặc Vercel Environment Variables. API lưu tệp riêng tư qua máy chủ; token không được gửi xuống trình duyệt. Documents và PhD-Doc hỗ trợ tối đa 10 tệp, tổng cộng **50 MB mỗi hồ sơ**. Tệp tải theo phần 1 MB; cần Redis đã cấu hình để lưu tạm các phần. Phần tệp hết hạn sau một giờ, xác nhận tệp hoàn tất giữ trong 24 giờ để thử lại bước lưu hồ sơ. Tải xuống dùng streaming để hỗ trợ tệp lớn.
 
 ## Triển khai Vercel/GitHub
 1. Tạo project Google Cloud, bật *Gmail API*, cấu hình OAuth consent screen và tạo *OAuth Client ID* loại Web. Thêm redirect URI `https://TEN-MIEN-CUA-BAN.vercel.app/api/auth/callback`.
@@ -53,3 +55,8 @@ Documents trên màn hình rộng tối đa 700 px hiển thị ba cột: tên v
 Kiểm tra chức năng bằng `node scripts/check-articles.js` (GitHub/Redis giả lập, không ghi dữ liệu thật).
 
 Kiểm tra tải Minh chứng bằng `node scripts/check-evidence-upload.js`: nhiều tệp, tệp vượt giới hạn, mất phản hồi sau khi lưu, hết hạn phần tệp, xung đột cập nhật GitHub và giữ hàng đợi khi chưa tải xong. Tệp vượt 20 MB được báo tên và bỏ qua riêng; các tệp hợp lệ trong cùng lượt kéo vẫn được nhận. Tải gián đoạn được thử lại tối đa ba lần, chỉ bỏ tệp khỏi hàng đợi sau khi máy chủ xác nhận đã lưu.
+
+### PhD-Doc
+Tab **PhD-Doc** nằm ngay dưới Documents, dùng cùng giao diện, các danh mục Văn bản / Quyết định / Giấy tờ khác, tìm kiếm, thêm/sửa/gỡ hồ sơ, mở/tải xuống và chế độ xem gọn trên điện thoại. Documents giữ dữ liệu tại `documents/index.json` và `documents/files/`; PhD-Doc lưu riêng tại `phd-doc/index.json` và `phd-doc/files/`. Tab mới bắt đầu với kho riêng, không tự sao chép các hồ sơ Documents hiện có.
+
+Chạy `node scripts/check-documents.js` để kiểm tra bằng GitHub/Redis giả lập: tệp 50 MB, giới hạn tổng dung lượng, tải xuống lớn, thử lại khi mất phản hồi và tách biệt dữ liệu hai tab.
