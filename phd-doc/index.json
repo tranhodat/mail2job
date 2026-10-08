@@ -1,5 +1,23 @@
 [
   {
+    "id": "b23888bf-7869-4efe-a00f-33813c5b8fc6",
+    "title": "Quyết định Giao chuyên đề & TLTQ",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:28:07.196Z",
+    "updatedAt": "2026-10-08T09:28:07.196Z",
+    "files": [
+      {
+        "id": "cb6c9600-61e0-4590-9e9a-7e3ab7055576",
+        "name": "3. QĐ 2418 GIAO CĐ&TLTQ_Trần Hồ Đạt.pdf",
+        "type": "application/pdf",
+        "size": 3200072,
+        "sha": "47758ba19baa948ed7b844077f96468a6b60950d",
+        "path": "phd-doc/files/b23888bf-7869-4efe-a00f-33813c5b8fc6/cb6c9600-61e0-4590-9e9a-7e3ab7055576.pdf"
+      }
+    ]
+  },
+  {
     "id": "f4576a6d-eeaf-411e-80fa-e12583cb8a6b",
     "title": "Quyết định Cử đi học",
     "number": "",
