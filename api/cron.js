@@ -5,7 +5,11 @@ module.exports = U.h(async (req, res) => {
   let n = 0;
   for (const e of (await U.get('users')) || []) {
     const ts = (await U.get('t:' + e)) || [];
-    for (const t of ts) if (t.step === 0 && !t.error && new Date(t.runAt) <= new Date()) { await U.run(e, t); n++; }
+    for (const t of ts) if (!t.completed && t.step === 0 && !t.error && new Date(t.runAt) <= new Date()) {
+      await U.run(e, t);
+      if (t.draftId && t.step === 3) await U.send(e, t);
+      n++;
+    }
     await U.set('t:' + e, ts);
   }
   res.json({ processed: n });
