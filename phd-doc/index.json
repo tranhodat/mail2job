@@ -1,5 +1,23 @@
 [
   {
+    "id": "a28ae063-6319-451f-8b15-574f943a13b2",
+    "title": "Quyết định Hội đồng chấm Tiểu luận tổng quan",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:27:17.153Z",
+    "updatedAt": "2026-10-08T09:27:17.153Z",
+    "files": [
+      {
+        "id": "311e768b-b08e-4b18-bf74-6aa33a8cdfd9",
+        "name": "6. QĐ 797 HOI DONG CHAM TIEU LUAN TONG QUAN Trần Hồ Đạt.pdf",
+        "type": "application/pdf",
+        "size": 2643679,
+        "sha": "f708c061bbb25db65bd5b32d7d79dafbc3f4f9d2",
+        "path": "phd-doc/files/a28ae063-6319-451f-8b15-574f943a13b2/311e768b-b08e-4b18-bf74-6aa33a8cdfd9.pdf"
+      }
+    ]
+  },
+  {
     "id": "10ce8e11-ff7d-470e-bef1-ca453876efe3",
     "title": "Quyết định Hội đồng chấm chuyên đề 1",
     "number": "",
