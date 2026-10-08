@@ -1,5 +1,23 @@
 [
   {
+    "id": "c2348cdc-9f65-4908-bf32-8dc2ec81da22",
+    "title": "Quyết định Hội đồng chấm chuyên đề 2",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:25:29.243Z",
+    "updatedAt": "2026-10-08T09:25:29.243Z",
+    "files": [
+      {
+        "id": "508712d3-ee8e-4d22-9468-65214f7ac325",
+        "name": "8. QD 212 HOI DONG CHAM CD 2 Trần Hồ Đạt.pdf",
+        "type": "application/pdf",
+        "size": 2779602,
+        "sha": "9644c12a249b9d8c52f46a739a8b74c08ee2cca1",
+        "path": "phd-doc/files/c2348cdc-9f65-4908-bf32-8dc2ec81da22/508712d3-ee8e-4d22-9468-65214f7ac325.pdf"
+      }
+    ]
+  },
+  {
     "id": "5c9e1f39-7620-4078-9dd0-fec3e2a6e5ef",
     "title": "Quyết định Hội đồng đánh giá giữa kỳ",
     "number": "",
