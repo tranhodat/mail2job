@@ -173,6 +173,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/699c0d39-28f1-4d1c-b561-f314eb7ade57/DAT PHONG.pdf",
         "size": 81261
+      },
+      {
+        "id": "73f981ea-e261-4fe4-a501-40525e6fcc2e",
+        "name": "ID 1721 - Licence to Publish.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/73f981ea-e261-4fe4-a501-40525e6fcc2e/ID 1721 - Licence to Publish.pdf",
+        "size": 2201342
       }
     ]
   },
