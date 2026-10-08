@@ -277,7 +277,7 @@
   {
     "id": "55d48821-3c3f-4950-9e10-1a9789b24d46",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:50:24.873Z",
+    "updatedAt": "2026-10-08T08:50:28.924Z",
     "title": "Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram",
     "authors": "Ho-Dat TRAN; Thuong-Cang PHAN; Vinh-Phong NGUYEN; Anh-Cang PHAN",
     "venue": "Proceedings of the 18th National Conference on Fundamental and Applied Information Technology Research (FAIR’2025)",
@@ -336,6 +336,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/17a26280-b883-4186-8e1a-69f7b5bc2070/Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram.pdf",
         "size": 434170
+      },
+      {
+        "id": "23603c80-55bc-45b4-8a5b-e3cf832f683b",
+        "name": "FAIRTemplae_IEEE_latex.zip",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/23603c80-55bc-45b4-8a5b-e3cf832f683b/FAIRTemplae_IEEE_latex.zip",
+        "size": 807981
       }
     ]
   },
