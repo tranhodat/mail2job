@@ -1,5 +1,23 @@
 [
   {
+    "id": "f4576a6d-eeaf-411e-80fa-e12583cb8a6b",
+    "title": "Quyết định Cử đi học",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:27:50.290Z",
+    "updatedAt": "2026-10-08T09:27:50.290Z",
+    "files": [
+      {
+        "id": "b61da0dd-1a1e-484b-a53a-d8480727f130",
+        "name": "4. QD 454 VLUTE - QD CU DI HOC - TRAN HO DAT.pdf",
+        "type": "application/pdf",
+        "size": 533053,
+        "sha": "6461a8f4ed7c502940bd750d16883fc07af80adf",
+        "path": "phd-doc/files/f4576a6d-eeaf-411e-80fa-e12583cb8a6b/b61da0dd-1a1e-484b-a53a-d8480727f130.pdf"
+      }
+    ]
+  },
+  {
     "id": "39db62ad-67a5-4dcc-80d4-7df4715db9d1",
     "title": "Quyết định Hội đồng đánh giá ĐCCT",
     "number": "",
