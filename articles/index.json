@@ -150,7 +150,16 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "5c3e00f2-7ffd-482b-a245-2f6c831886a5",
+        "name": "3. ICCCI2025-ID113.zip",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/5c3e00f2-7ffd-482b-a245-2f6c831886a5/3. ICCCI2025-ID113.zip",
+        "size": 6013110
+      }
+    ]
   },
   {
     "id": "55d48821-3c3f-4950-9e10-1a9789b24d46",
