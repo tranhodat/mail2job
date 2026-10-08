@@ -49,18 +49,20 @@ async function request(act, body) {
   const draft = { title: 'Minh chứng', year: '2026', status: 'Đang chuẩn bị', scopus: 'Q1', wos: '-' };
   const created = await request('save', draft), id = created.data.id;
   const uploadId = crypto.randomUUID();
+  const longName='EXPLAINABLE ARTIFICIAL INTELLIGENCE '.repeat(4)+'.pdf';
   const parts = ['first', 'second', 'third'];
   for (let chunk = 0; chunk < 2; chunk++) {
-    const r = await request('upload', { id, uploadId, chunk, count: 3, name: 'paper.pdf', data: Buffer.from(parts[chunk]).toString('base64') });
+    const r = await request('upload', { id, uploadId, chunk, count: 3, name: longName, data: Buffer.from(parts[chunk]).toString('base64') });
     assert.equal(r.data.pending, true);
   }
   conflictOnce = true;
-  const last = await request('upload', { id, uploadId, chunk: 2, count: 3, name: 'paper.pdf', data: Buffer.from(parts[2]).toString('base64') });
+  const last = await request('upload', { id, uploadId, chunk: 2, count: 3, name: longName, data: Buffer.from(parts[2]).toString('base64') });
   assert.equal(last.statusCode, 200);
+  const attachment=last.data.items[0].files.find(f=>f.id===uploadId);assert.equal(attachment.name,longName);assert((process.cwd()+'/'+attachment.path).length<260);assert(attachment.path.endsWith('.pdf'));
   assert.equal(last.data.items[0].files.filter(f => f.id === uploadId).length, 1);
   assert(last.data.items[0].files.some(f => f.id === 'concurrent'));
   assert.equal(store.size, 0);
-  const replay = await request('upload', { id, uploadId, chunk: 2, count: 3, name: 'paper.pdf', data: Buffer.from(parts[2]).toString('base64') });
+  const replay = await request('upload', { id, uploadId, chunk: 2, count: 3, name: longName, data: Buffer.from(parts[2]).toString('base64') });
   assert(replay.data.items[0].files.some(f => f.id === uploadId));
   assert.equal(store.size, 0);
   assert.equal([...files.values()][0].bytes.toString(), parts.join(''));

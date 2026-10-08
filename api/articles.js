@@ -1,5 +1,6 @@
 const U = require('../lib/util');
 const crypto = require('crypto');
+const storedFileName = require('../lib/storage-path');
 const INDEX='articles/index.json';
 function config(){const {GITHUB_TOKEN:token,GITHUB_OWNER:owner,GITHUB_REPO:repo}=process.env;if(!token||!owner||!repo)throw Error('Hãy cấu hình GitHub để lưu bài báo');return {token,owner,repo,branch:process.env.GITHUB_BRANCH||'main'}}
 const pathPart=p=>p.split('/').map(encodeURIComponent).join('/');
@@ -29,7 +30,7 @@ if(act==='upload'){
   const bytes=Buffer.concat(parts.map(p=>Buffer.from(p.data,'base64')));
   if(bytes.length>20*1024*1024)return res.status(413).json({error:'Mỗi tệp tối đa 20 MB'});
   const name=String(b.name||'tep').split(/[\\/]/).pop().replace(/[\u0000-\u001f]/g,'').slice(0,180)||'tep';
-  const path=`articles/files/${b.id}/${uploadId}/${name}`,sha=crypto.createHash('sha1').update(Buffer.concat([Buffer.from(`blob ${bytes.length}\0`),bytes])).digest('hex');
+  const path=`articles/files/${b.id}/${uploadId}/${storedFileName(name)}`,sha=crypto.createHash('sha1').update(Buffer.concat([Buffer.from(`blob ${bytes.length}\0`),bytes])).digest('hex');
   try{await github(`contents/${pathPart(path)}`,'PUT',{message:'Add article attachment',branch:config().branch,content:bytes.toString('base64')})}
   catch(e){if(![409,422].includes(e.status))throw e;const existing=await github(`contents/${pathPart(path)}?ref=${encodeURIComponent(config().branch)}`);if(existing.sha!==sha)throw e}
   const file={id:uploadId,name,role:['evidence','code','note'].includes(b.role)?b.role:'evidence',type:['image/png','image/jpeg','image/gif','image/webp'].includes(b.type)?b.type:'application/octet-stream',path,size:bytes.length};

@@ -60,3 +60,6 @@ Kiểm tra tải Minh chứng bằng `node scripts/check-evidence-upload.js`: nh
 Tab **PhD-Doc** nằm ngay dưới Documents, dùng cùng giao diện, các danh mục Văn bản / Quyết định / Giấy tờ khác, tìm kiếm, thêm/sửa/gỡ hồ sơ, mở/tải xuống và chế độ xem gọn trên điện thoại. Documents giữ dữ liệu tại `documents/index.json` và `documents/files/`; PhD-Doc lưu riêng tại `phd-doc/index.json` và `phd-doc/files/`. Tab mới bắt đầu với kho riêng, không tự sao chép các hồ sơ Documents hiện có.
 
 Chạy `node scripts/check-documents.js` để kiểm tra bằng GitHub/Redis giả lập: tệp 50 MB, giới hạn tổng dung lượng, tải xuống lớn, thử lại khi mất phản hồi và tách biệt dữ liệu hai tab.
+
+### Git trên Windows: Filename too long
+Trong thư mục repository, chạy `git config --local core.longpaths true` nếu Pull/Merge báo tên tệp quá dài. Các tệp tải lên mới trong Bài báo, Documents và PhD-Doc dùng đường dẫn ngắn theo mã tệp; tên gốc vẫn hiển thị trong ứng dụng và khi tải xuống. Những tệp cũ giữ nguyên đường dẫn để bảo toàn liên kết.

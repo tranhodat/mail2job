@@ -61,11 +61,13 @@ async function upload(space, size, name) {
   const original = await request('documents', 'save', { title: 'Documents cũ', category: 'Văn bản', files: [{ name: 'old.pdf', data: Buffer.from('old').toString('base64') }] });
   assert.equal(original.statusCode, 200);
   const originalId = original.data.id;
-  const largeId = await upload('phd-doc', 50 * MB, '50mb.pdf');
+  const longName='Nghiên cứu '.repeat(14)+'.pdf';
+  const largeId = await upload('phd-doc', 50 * MB, longName);
   const profileId = crypto.randomUUID();
   const saved = await request('phd-doc', 'save', { createId: profileId, title: 'PhD 50 MB', category: 'Quyết định', uploadIds: [largeId] });
   assert.equal(saved.statusCode, 200); assert.equal(saved.data.items[0].files[0].size, 50 * MB);
   assert(saved.data.items[0].files[0].path.startsWith('phd-doc/files/'));
+  assert.equal(saved.data.items[0].files[0].name,longName);assert((process.cwd()+'/'+saved.data.items[0].files[0].path).length<260);assert(saved.data.items[0].files[0].path.endsWith('.pdf'));
   assert.equal((await request('documents', undefined, {}, 'GET')).data.items[0].id, originalId);
   assert.equal((await request('documents', 'save', { title: 'Cross store', category: 'Văn bản', uploadIds: [largeId] })).statusCode, 400);
   const tooLarge = await request('documents', 'upload', { uploadId: crypto.randomUUID(), chunk: 0, count: 51, size: 50 * MB + 1, data: '' });
