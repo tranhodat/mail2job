@@ -1,5 +1,23 @@
 [
   {
+    "id": "43599d85-bbbe-4460-916a-4fd4572b51b7",
+    "title": "Phiếu đăng ký gia hạn NCS",
+    "number": "",
+    "category": "Giấy tờ khác",
+    "createdAt": "2026-10-08T09:29:30.498Z",
+    "updatedAt": "2026-10-08T09:29:30.498Z",
+    "files": [
+      {
+        "id": "58d8b148-b45d-426f-8187-299fcfae5c70",
+        "name": "Phieu dang ky gia han thoi gian dao tao-NCS Tran Ho Dat (1).pdf",
+        "type": "application/pdf",
+        "size": 233165,
+        "sha": "3fa5c605dc593a331a3063d78aee593e2f885b0c",
+        "path": "phd-doc/files/43599d85-bbbe-4460-916a-4fd4572b51b7/58d8b148-b45d-426f-8187-299fcfae5c70.pdf"
+      }
+    ]
+  },
+  {
     "id": "7ed7df6d-7b18-4973-af26-27aade66c25b",
     "title": "Quyết định Hội đòng bảo vệ KLTN (CTU)",
     "number": "",
