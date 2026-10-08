@@ -1,5 +1,23 @@
 [
   {
+    "id": "5c9e1f39-7620-4078-9dd0-fec3e2a6e5ef",
+    "title": "Quyết định Hội đồng đánh giá giữa kỳ",
+    "number": "",
+    "category": "Quyết định",
+    "createdAt": "2026-10-08T09:25:09.230Z",
+    "updatedAt": "2026-10-08T09:25:09.230Z",
+    "files": [
+      {
+        "id": "cf87fc86-fb8c-4584-b90b-58cc6a6ab86f",
+        "name": "9. QD 4357 HOI DONG DANH GIA GIUA KY Tran Ho Dat.pdf",
+        "type": "application/pdf",
+        "size": 788702,
+        "sha": "97e8debcb0a291019e3020e4a916ab099c4b7bbb",
+        "path": "phd-doc/files/5c9e1f39-7620-4078-9dd0-fec3e2a6e5ef/cf87fc86-fb8c-4584-b90b-58cc6a6ab86f.pdf"
+      }
+    ]
+  },
+  {
     "id": "3b54b430-eef3-4e65-823a-ad9f870693cf",
     "title": "Quyết định gia hạn NCS",
     "number": "",
