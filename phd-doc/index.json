@@ -1,5 +1,23 @@
 [
   {
+    "id": "ad5b7a89-989f-4bf9-b73d-26e42c1fb398",
+    "title": "Biên bản xét CTĐT",
+    "number": "",
+    "category": "Văn bản",
+    "createdAt": "2026-10-08T09:22:13.803Z",
+    "updatedAt": "2026-10-08T09:22:13.803Z",
+    "files": [
+      {
+        "id": "c04e807f-502b-4764-91e7-ebd639133eb0",
+        "name": "Bien ban xet CTDT NCS-Tran Ho Dat.pdf",
+        "type": "application/pdf",
+        "size": 831917,
+        "sha": "740eb836137643cadb4e42a2380a403162bd92b2",
+        "path": "phd-doc/files/ad5b7a89-989f-4bf9-b73d-26e42c1fb398/c04e807f-502b-4764-91e7-ebd639133eb0.pdf"
+      }
+    ]
+  },
+  {
     "id": "3d3d3466-baa2-4b6a-9fdd-3a682aca9a6d",
     "title": "Biên bản họp tiểu luận tổng quan",
     "number": "",
