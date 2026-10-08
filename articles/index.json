@@ -2,7 +2,7 @@
   {
     "id": "fca78acb-981e-42b0-8ca1-e477cfbd167d",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T07:52:03.901Z",
+    "updatedAt": "2026-10-08T08:53:04.008Z",
     "title": "Explainable Artificial Intelligence (Xai) for The Detection and Segmentation of Mass on Mammograms using Deep Learning Techniques",
     "authors": "Ho Dat Tran; Thuong Cang Phan; Vinh Phong Nguyen; Tri Nghia Phu; Anh Cang Phan",
     "venue": "IMEDS",
@@ -21,17 +21,58 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "755cedde-7cf0-4728-898c-71685e125889",
+        "name": "663059_1_En_63_Chapter_Author (1).pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/755cedde-7cf0-4728-898c-71685e125889/663059_1_En_63_Chapter_Author (1).pdf",
+        "size": 2688225
+      },
+      {
+        "id": "ea082e71-7ba2-4477-b9f5-da21a52d7ee4",
+        "name": "EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI) FOR THE DETECTION AND SEGMENTATION OF MASS ON MAMMOGRAMS USING DEEP LEARNING TECHNIQUE.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/ea082e71-7ba2-4477-b9f5-da21a52d7ee4/EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI) FOR THE DETECTION AND SEGMENTATION OF MASS ON MAMMOGRAMS USING DEEP LEARNING TECHNIQUE.pdf",
+        "size": 1037858
+      },
+      {
+        "id": "46b6ff68-81e9-463a-a2fe-70b3dcbde12a",
+        "name": "IMEDS - PID 530.pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/46b6ff68-81e9-463a-a2fe-70b3dcbde12a/IMEDS - PID 530.pptx",
+        "size": 8105000
+      },
+      {
+        "id": "523ab79e-6b6c-4c10-8012-5967d6f2904f",
+        "name": "Payment IDMES ID 530.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/523ab79e-6b6c-4c10-8012-5967d6f2904f/Payment IDMES ID 530.pdf",
+        "size": 4666327
+      },
+      {
+        "id": "cb4f12f7-bba3-4b08-918a-f47f3d16f936",
+        "name": "PID 530 EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI) FOR THE DETECTION AND SEGMENTATION OF MASS ON MAMMOGRAMS USING DEEP LEARNING T.docx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/fca78acb-981e-42b0-8ca1-e477cfbd167d/cb4f12f7-bba3-4b08-918a-f47f3d16f936/PID 530 EXPLAINABLE ARTIFICIAL INTELLIGENCE (XAI) FOR THE DETECTION AND SEGMENTATION OF MASS ON MAMMOGRAMS USING DEEP LEARNING T.docx",
+        "size": 2544684
+      }
+    ]
   },
   {
     "id": "7acda50d-abaf-4828-a975-404d26e6e1f8",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T07:52:03.901Z",
+    "updatedAt": "2026-10-08T09:01:26.362Z",
     "title": "Weight-Optimized Ensemble Deep Learning for Accurate Mammographic Image Classification",
     "authors": "Ho Dat Tran; Anh Cang Phan; Long Hien Ho; Thuong Cang Phan",
     "venue": "International Conference on Computational Intelligence in Engineering Science",
     "year": "2026",
-    "page": "",
+    "page": "432-445 / Vol: 2943",
     "issn": "978-3-032-21624-3       978-3-032-21625-0",
     "doi": "10.1007/978-3-032-21625-0_30",
     "abstract": "",
@@ -45,17 +86,74 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "35dfa87c-4960-4788-ba6a-4a982013cd79",
+        "name": "#84-Invitation Letter.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/35dfa87c-4960-4788-ba6a-4a982013cd79/#84-Invitation Letter.pdf",
+        "size": 96141
+      },
+      {
+        "id": "36533152-d965-416a-b14e-12f30d8df708",
+        "name": "84_Ho Dat TRAN (1).pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/36533152-d965-416a-b14e-12f30d8df708/84_Ho Dat TRAN (1).pptx",
+        "size": 5668461
+      },
+      {
+        "id": "2c45917e-f5c7-4dbb-ba98-d63aa3315c62",
+        "name": "84_Ho Dat TRAN.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/2c45917e-f5c7-4dbb-ba98-d63aa3315c62/84_Ho Dat TRAN.pdf",
+        "size": 2810462
+      },
+      {
+        "id": "f1fcfab3-a50f-40d5-8be3-f026ad2da4e4",
+        "name": "1025_QĐ cử NCS tham dự và báo cáo tại Hội thảo_Trần Hồ Đạt.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/f1fcfab3-a50f-40d5-8be3-f026ad2da4e4/1025_QĐ cử NCS tham dự và báo cáo tại Hội thảo_Trần Hồ Đạt.pdf",
+        "size": 2727674
+      },
+      {
+        "id": "31aad21c-cf19-406e-b060-bc49a301a69c",
+        "name": "ICCIES 2026 - Weight-Optimized Ensemble Deep Learning for Accurate Mammographic Image Classification.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/31aad21c-cf19-406e-b060-bc49a301a69c/ICCIES 2026 - Weight-Optimized Ensemble Deep Learning for Accurate Mammographic Image Classification.pdf",
+        "size": 1901563
+      },
+      {
+        "id": "046860d5-b901-4084-81ce-f2f1d20a72d4",
+        "name": "ICCIES2026_84_AnhCangPhan.zip",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/046860d5-b901-4084-81ce-f2f1d20a72d4/ICCIES2026_84_AnhCangPhan.zip",
+        "size": 5349347
+      },
+      {
+        "id": "5f8fc4ee-f0c3-4862-a93c-54b42c26d8ef",
+        "name": "Scimago - Communications in Computer and Information Science.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/5f8fc4ee-f0c3-4862-a93c-54b42c26d8ef/Scimago - Communications in Computer and Information Science.pdf",
+        "size": 1247390
+      }
+    ]
   },
   {
     "id": "4bbfa5cb-b916-4311-ba14-047f21fde3e1",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:29:43.816Z",
+    "updatedAt": "2026-10-08T08:59:42.595Z",
     "title": "A Novel Proposal For Mammogram Mass Segmentation Using an Improved Fuzzy C-means",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Anh-Cang Phan",
     "venue": "SN Computer Science",
     "year": "2025",
-    "page": "",
+    "page": "915 / Vol: 6",
     "issn": "2661-8907",
     "doi": "10.1007/s42979-025-04430-2",
     "abstract": "",
@@ -107,12 +205,12 @@
   {
     "id": "e4c3c756-2d12-46d4-8e18-2fbaec2024fa",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T07:52:03.901Z",
+    "updatedAt": "2026-10-08T09:00:35.295Z",
     "title": "Breast Cancer Classification Based on Fuzzy Rules and Deep Learning Techniques",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Vinh-Phong Nguyen; Anh-Cang Phan",
     "venue": "International Conference on Computational Intelligence in Engineering Science",
     "year": "2025",
-    "page": "",
+    "page": "13-26 / Vol: 2587",
     "issn": "978-3-031-98169-2       978-3-031-98170-8",
     "doi": "10.1007/978-3-031-98170-8_2",
     "abstract": "",
@@ -126,17 +224,74 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "9f3ce04a-6fc2-4d29-8f7d-bbc82f7a0794",
+        "name": "1. Breast cancer classification based on fuzzy rules and deep learning techiques.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/9f3ce04a-6fc2-4d29-8f7d-bbc82f7a0794/1. Breast cancer classification based on fuzzy rules and deep learning techiques.pdf",
+        "size": 2877234
+      },
+      {
+        "id": "e5b49ba8-0c84-4977-97e9-d770d8d35c36",
+        "name": "161-Ho Dat - invitation .pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/e5b49ba8-0c84-4977-97e9-d770d8d35c36/161-Ho Dat - invitation .pdf",
+        "size": 120829
+      },
+      {
+        "id": "742a8916-4aae-4909-8b33-7efb3fb3a06f",
+        "name": "2879_QD tham du Hoi thao quoc te - ICCIES 2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/742a8916-4aae-4909-8b33-7efb3fb3a06f/2879_QD tham du Hoi thao quoc te - ICCIES 2025.pdf",
+        "size": 1751258
+      },
+      {
+        "id": "fba59fef-db0a-46c0-8d23-d0a377f84c02",
+        "name": "GIAY CHUNG NHAN.PNG",
+        "role": "evidence",
+        "type": "image/png",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/fba59fef-db0a-46c0-8d23-d0a377f84c02/GIAY CHUNG NHAN.PNG",
+        "size": 919697
+      },
+      {
+        "id": "54dc701a-c60b-403b-9507-bbfbf7faf23c",
+        "name": "ICCIES - TDT - 2025.pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/54dc701a-c60b-403b-9507-bbfbf7faf23c/ICCIES - TDT - 2025.pptx",
+        "size": 6350080
+      },
+      {
+        "id": "92a9894c-bda1-4458-b964-3d2b8e27508d",
+        "name": "ICCIES2025_161_Ho Dat TRAN - LATEX.rar",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/92a9894c-bda1-4458-b964-3d2b8e27508d/ICCIES2025_161_Ho Dat TRAN - LATEX.rar",
+        "size": 5354780
+      },
+      {
+        "id": "82eacb39-e10b-4ccb-b691-66f94eab0b4b",
+        "name": "Payment Confirmation – 161 ICCIES2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/e4c3c756-2d12-46d4-8e18-2fbaec2024fa/82eacb39-e10b-4ccb-b691-66f94eab0b4b/Payment Confirmation – 161 ICCIES2025.pdf",
+        "size": 3014052
+      }
+    ]
   },
   {
     "id": "4a8557af-f406-425a-9378-e54bb1f68288",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:33:56.512Z",
+    "updatedAt": "2026-10-08T08:59:54.649Z",
     "title": "An Explainable AI-Based Breast Cancer Classification Combining Rule Sets and Deep Neural Networks",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Vinh-Phong Nguyen; Anh-Cang Phan",
     "venue": "International Conference on Computational Collective Intelligence",
     "year": "2025",
-    "page": "",
+    "page": "260-274",
     "issn": "978-3-032-10208-9     978-3-032-10209-6",
     "doi": "10.1007/978-3-032-10209-6_18",
     "abstract": "",
@@ -174,18 +329,58 @@
         "type": "application/octet-stream",
         "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/1b7bfc2b-ede6-4ea8-8fce-1306fd61d2d6/GIAY CHUNG NHAN.pdf",
         "size": 428285
+      },
+      {
+        "id": "7c3c371e-71ec-4d26-9158-b86e44a6a4e5",
+        "name": "ICCCI - ID 113 (1).pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/7c3c371e-71ec-4d26-9158-b86e44a6a4e5/ICCCI - ID 113 (1).pptx",
+        "size": 8880044
+      },
+      {
+        "id": "90d895dd-8f2d-47e8-935e-a0c4038d3535",
+        "name": "ID 113.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/90d895dd-8f2d-47e8-935e-a0c4038d3535/ID 113.pdf",
+        "size": 1725373
+      },
+      {
+        "id": "574e9ab7-e208-4d65-a7ec-938dd34aae9f",
+        "name": "invitation_51.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/574e9ab7-e208-4d65-a7ec-938dd34aae9f/invitation_51.pdf",
+        "size": 796414
+      },
+      {
+        "id": "db26c619-85f9-412c-9565-a5bda98c7974",
+        "name": "Invoice - wdu_w4n_0052_06_2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/db26c619-85f9-412c-9565-a5bda98c7974/Invoice - wdu_w4n_0052_06_2025.pdf",
+        "size": 65134
+      },
+      {
+        "id": "f6ffcaf5-75c5-4076-823e-802f06d912de",
+        "name": "receipt_51.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4a8557af-f406-425a-9378-e54bb1f68288/f6ffcaf5-75c5-4076-823e-802f06d912de/receipt_51.pdf",
+        "size": 784136
       }
     ]
   },
   {
     "id": "55d48821-3c3f-4950-9e10-1a9789b24d46",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T07:52:03.901Z",
+    "updatedAt": "2026-10-08T09:00:59.366Z",
     "title": "Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram",
     "authors": "Ho-Dat TRAN; Thuong-Cang PHAN; Vinh-Phong NGUYEN; Anh-Cang PHAN",
     "venue": "Proceedings of the 18th National Conference on Fundamental and Applied Information Technology Research (FAIR’2025)",
     "year": "2025",
-    "page": "",
+    "page": "237-243",
     "issn": "978-604- 357-455-5",
     "doi": "10.15625/vap.2025.0292",
     "abstract": "",
@@ -199,17 +394,154 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "ba97c949-ba0b-40e7-bfd9-93f6572eb9ea",
+        "name": "3905_QD Tran Ho Dat tham du hoi thao FAIR 2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/ba97c949-ba0b-40e7-bfd9-93f6572eb9ea/3905_QD Tran Ho Dat tham du hoi thao FAIR 2025.pdf",
+        "size": 815562
+      },
+      {
+        "id": "f9f025cf-e0c1-4364-a255-b4b2bf4b49a1",
+        "name": "bia-fair2025.rar",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/f9f025cf-e0c1-4364-a255-b4b2bf4b49a1/bia-fair2025.rar",
+        "size": 18627948
+      },
+      {
+        "id": "dc27a139-0556-4440-a86f-5efc881fcaf1",
+        "name": "CHỨNG NHẬN HỘI THẢO FAIR 2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/dc27a139-0556-4440-a86f-5efc881fcaf1/CHỨNG NHẬN HỘI THẢO FAIR 2025.pdf",
+        "size": 3727214
+      },
+      {
+        "id": "e2f09548-85d7-4826-9c31-dc5248a401db",
+        "name": "Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram (1).pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/e2f09548-85d7-4826-9c31-dc5248a401db/Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram (1).pdf",
+        "size": 434170
+      },
+      {
+        "id": "17a26280-b883-4186-8e1a-69f7b5bc2070",
+        "name": "Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/17a26280-b883-4186-8e1a-69f7b5bc2070/Deep Learning Ensemble with ESD-Net in Breast Cancer Classification on Mammogram.pdf",
+        "size": 434170
+      },
+      {
+        "id": "23603c80-55bc-45b4-8a5b-e3cf832f683b",
+        "name": "FAIRTemplae_IEEE_latex.zip",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/23603c80-55bc-45b4-8a5b-e3cf832f683b/FAIRTemplae_IEEE_latex.zip",
+        "size": 807981
+      },
+      {
+        "id": "b47d03f1-d521-4784-a58b-d94b86981897",
+        "name": "ID 7711 - FAIR 2025.pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/b47d03f1-d521-4784-a58b-d94b86981897/ID 7711 - FAIR 2025.pptx",
+        "size": 5745804
+      },
+      {
+        "id": "974d5f44-8bab-4d6c-9957-799cade0a0c9",
+        "name": "MÔ HÌNH HỌC SÂU KẾT HỢP ESD-NET TRONG PHÂN LOẠI UNG THƯ TRÊN NHŨ ẢNH.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/974d5f44-8bab-4d6c-9957-799cade0a0c9/MÔ HÌNH HỌC SÂU KẾT HỢP ESD-NET TRONG PHÂN LOẠI UNG THƯ TRÊN NHŨ ẢNH.pdf",
+        "size": 1605644
+      },
+      {
+        "id": "f64f6f0f-e3f0-47bd-a093-4c249feecf3d",
+        "name": "Thư Vinh Long University of Technology Education - FAIR2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/f64f6f0f-e3f0-47bd-a093-4c249feecf3d/Thư Vinh Long University of Technology Education - FAIR2025.pdf",
+        "size": 151567
+      },
+      {
+        "id": "407a5a96-3795-4cfb-8241-a3d71b2d799b",
+        "name": "z6943488704838_85f413957cd74d10fdc2da034558f5d2.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/407a5a96-3795-4cfb-8241-a3d71b2d799b/z6943488704838_85f413957cd74d10fdc2da034558f5d2.jpg",
+        "size": 843003
+      },
+      {
+        "id": "06434f77-1dd0-4b64-9f35-6bdeb20594c9",
+        "name": "z6943488788735_4d318d606de1aafe06507e6820c015c3.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/06434f77-1dd0-4b64-9f35-6bdeb20594c9/z6943488788735_4d318d606de1aafe06507e6820c015c3.jpg",
+        "size": 852843
+      },
+      {
+        "id": "ee6bbacd-26c8-4630-a56b-12318fe5e787",
+        "name": "z6943495786203_bfd3258d3cbf3188f68c972f39e6c9ed.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/ee6bbacd-26c8-4630-a56b-12318fe5e787/z6943495786203_bfd3258d3cbf3188f68c972f39e6c9ed.jpg",
+        "size": 730007
+      },
+      {
+        "id": "fe8f6d39-6232-4818-a2cc-58d9ca9a4e37",
+        "name": "z6943495895877_39a557cee1a15040497f88415990760d.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/fe8f6d39-6232-4818-a2cc-58d9ca9a4e37/z6943495895877_39a557cee1a15040497f88415990760d.jpg",
+        "size": 623546
+      },
+      {
+        "id": "37cfdc9c-ae8f-469b-ba1d-ca1999d52ed7",
+        "name": "z6943495934782_0619173006b98426063d71017fafb61f (1).jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/37cfdc9c-ae8f-469b-ba1d-ca1999d52ed7/z6943495934782_0619173006b98426063d71017fafb61f (1).jpg",
+        "size": 566617
+      },
+      {
+        "id": "95542819-30cb-49d5-ad69-1efc2b278907",
+        "name": "z6943495981470_4b8589089df81c43a25fb88ea85b7f6b (1).jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/95542819-30cb-49d5-ad69-1efc2b278907/z6943495981470_4b8589089df81c43a25fb88ea85b7f6b (1).jpg",
+        "size": 886206
+      },
+      {
+        "id": "6373e457-5f1c-4941-9839-40dcbbe835f0",
+        "name": "z6943495981470_4b8589089df81c43a25fb88ea85b7f6b.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/6373e457-5f1c-4941-9839-40dcbbe835f0/z6943495981470_4b8589089df81c43a25fb88ea85b7f6b.jpg",
+        "size": 886206
+      },
+      {
+        "id": "b2046c96-b024-45e3-afe5-c47d5be02d2b",
+        "name": "z6943496090818_2495aadb8e68ad25a60d4198af53dcd2.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/55d48821-3c3f-4950-9e10-1a9789b24d46/b2046c96-b024-45e3-afe5-c47d5be02d2b/z6943496090818_2495aadb8e68ad25a60d4198af53dcd2.jpg",
+        "size": 910798
+      }
+    ]
   },
   {
     "id": "75818eaa-77d6-436e-8011-4f638d0de901",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:35:23.976Z",
+    "updatedAt": "2026-10-08T09:00:08.492Z",
     "title": "Automatic Segmentation of Masses on Mammograms Using Fuzzy Logic",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Vinh-Phong Nguyen; Anh-Cang Phan",
     "venue": "International Conference on Intelligent Systems and Data Science",
     "year": "2024",
-    "page": "",
+    "page": "69-82 / Vol: 2190",
     "issn": "978-981-97-9612-0      978-981-97-9613-7",
     "doi": "10.1007/978-981-97-9613-7_6",
     "abstract": "",
@@ -247,18 +579,34 @@
         "type": "application/octet-stream",
         "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/030dc57f-01f3-47ea-93fd-ee620952456b/AUTOMATIC SEGMENTATION OF MASSES ON MAMMOGRAM USING FUZZY LOGIC.rar",
         "size": 5917483
+      },
+      {
+        "id": "370507a4-eaf8-488b-9c70-dfee53a5af60",
+        "name": "SLIDE ID1721.pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/370507a4-eaf8-488b-9c70-dfee53a5af60/SLIDE ID1721.pptx",
+        "size": 8804971
+      },
+      {
+        "id": "72498789-f275-42df-ab1b-0ead69215ab9",
+        "name": "ID 1721 -  Automatic segmentation.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/72498789-f275-42df-ab1b-0ead69215ab9/ID 1721 -  Automatic segmentation.pdf",
+        "size": 3903335
       }
     ]
   },
   {
     "id": "0cb29d91-5a0d-48a0-981a-2a3bb70cc269",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T07:52:03.901Z",
+    "updatedAt": "2026-10-08T09:00:45.936Z",
     "title": "Breast Cancer Classification Using Ensemble Deep Learning with RIDOPT-Net",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Van-Kha Vo; Anh-Cang Phan",
     "venue": "International Conference on Intelligent Systems and Data Science",
     "year": "2025",
-    "page": "",
+    "page": "175-189",
     "issn": "9789819533541       9789819533558",
     "doi": "10.1007/978-981-95-3355-8_13",
     "abstract": "",
@@ -272,17 +620,90 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "bbcfd5eb-6f0e-450b-955b-0f27a80baab7",
+        "name": "4829_QD tham du hoi thao- ISDS 2025.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/bbcfd5eb-6f0e-450b-955b-0f27a80baab7/4829_QD tham du hoi thao- ISDS 2025.pdf",
+        "size": 835466
+      },
+      {
+        "id": "8a116dc1-1fa4-444a-926f-496a42173587",
+        "name": "GIAY CHUNG NHAN.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/8a116dc1-1fa4-444a-926f-496a42173587/GIAY CHUNG NHAN.pdf",
+        "size": 4535135
+      },
+      {
+        "id": "23bdcb36-89f7-4990-84b4-f58dcd8464e2",
+        "name": "IMG_7699.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/23bdcb36-89f7-4990-84b4-f58dcd8464e2/IMG_7699.jpg",
+        "size": 7765528
+      },
+      {
+        "id": "ce09aea9-23dd-4ebe-915d-0d899b3b1180",
+        "name": "IMG_7701.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/ce09aea9-23dd-4ebe-915d-0d899b3b1180/IMG_7701.jpg",
+        "size": 7658960
+      },
+      {
+        "id": "bacb15b1-329a-4d7e-927b-c40c3ae7c8ef",
+        "name": "IMG_7703.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/bacb15b1-329a-4d7e-927b-c40c3ae7c8ef/IMG_7703.jpg",
+        "size": 8425638
+      },
+      {
+        "id": "bba87155-9f9c-419b-80a8-7c886ba98866",
+        "name": "IMG_7718.jpg",
+        "role": "evidence",
+        "type": "image/jpeg",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/bba87155-9f9c-419b-80a8-7c886ba98866/IMG_7718.jpg",
+        "size": 8963392
+      },
+      {
+        "id": "ac028d00-de0e-4f91-be70-92b717ca4d9f",
+        "name": "ISDS - ID 35.pptx",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/ac028d00-de0e-4f91-be70-92b717ca4d9f/ISDS - ID 35.pptx",
+        "size": 7341928
+      },
+      {
+        "id": "d64c2f80-1d0e-4684-bf09-f5909e0a09c3",
+        "name": "ISDS-ID0035.zip",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/d64c2f80-1d0e-4684-bf09-f5909e0a09c3/ISDS-ID0035.zip",
+        "size": 8688119
+      },
+      {
+        "id": "9f4b242e-6d81-4000-8f8b-ff366c9fc9f7",
+        "name": "Paper ID 0035.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/9f4b242e-6d81-4000-8f8b-ff366c9fc9f7/Paper ID 0035.pdf",
+        "size": 2900353
+      }
+    ]
   },
   {
     "id": "45576f56-8817-4809-8bed-ac95a4fb0a47",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T07:52:03.901Z",
+    "updatedAt": "2026-10-08T09:01:15.528Z",
     "title": "FGOOPNet: A Fuzzy Deep Learning Approach for Mammographic Breast Cancer Classification",
     "authors": "Ho Dat Tran; Anh Cang Phan; Thuong Cang Phan",
     "venue": "Current Medical Imaging",
     "year": "2026",
-    "page": "",
+    "page": "Vol 22",
     "issn": "15734056",
     "doi": "10.2174/0115734056448448260408054729",
     "abstract": "",
@@ -296,6 +717,47 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "0e1922ab-a31a-43f6-b8a0-d2f00aced528",
+        "name": "BIA TAP CHI.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/0e1922ab-a31a-43f6-b8a0-d2f00aced528/BIA TAP CHI.pdf",
+        "size": 384017
+      },
+      {
+        "id": "9921ccd3-1188-49da-9ff4-185f3f361057",
+        "name": "BMS-CMIM-2025-581 - FGOOPNet A Fuzzy Deep Learning Approach for Mammographic Breast Cancer Classification.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/9921ccd3-1188-49da-9ff4-185f3f361057/BMS-CMIM-2025-581 - FGOOPNet A Fuzzy Deep Learning Approach for Mammographic Breast Cancer Classification.pdf",
+        "size": 8701580
+      },
+      {
+        "id": "5d0c417c-5c95-41f8-9608-f8430a9052d1",
+        "name": "CMI Journal Q3 - copyright_form.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/5d0c417c-5c95-41f8-9608-f8430a9052d1/CMI Journal Q3 - copyright_form.pdf",
+        "size": 92479
+      },
+      {
+        "id": "25e87358-0e77-4ee4-b481-a81c4161a431",
+        "name": "invoice-1767665390-28903.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/25e87358-0e77-4ee4-b481-a81c4161a431/invoice-1767665390-28903.pdf",
+        "size": 61352
+      },
+      {
+        "id": "2be1da23-0583-4f9d-9e79-9545e19fafe8",
+        "name": "Link.txt",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/2be1da23-0583-4f9d-9e79-9545e19fafe8/Link.txt",
+        "size": 47
+      }
+    ]
   }
 ]
