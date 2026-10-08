@@ -67,7 +67,7 @@
   {
     "id": "7acda50d-abaf-4828-a975-404d26e6e1f8",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:57:25.138Z",
+    "updatedAt": "2026-10-08T08:57:33.841Z",
     "title": "Weight-Optimized Ensemble Deep Learning for Accurate Mammographic Image Classification",
     "authors": "Ho Dat Tran; Anh Cang Phan; Long Hien Ho; Thuong Cang Phan",
     "venue": "International Conference on Computational Intelligence in Engineering Science",
@@ -134,6 +134,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/046860d5-b901-4084-81ce-f2f1d20a72d4/ICCIES2026_84_AnhCangPhan.zip",
         "size": 5349347
+      },
+      {
+        "id": "5f8fc4ee-f0c3-4862-a93c-54b42c26d8ef",
+        "name": "Scimago - Communications in Computer and Information Science.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/7acda50d-abaf-4828-a975-404d26e6e1f8/5f8fc4ee-f0c3-4862-a93c-54b42c26d8ef/Scimago - Communications in Computer and Information Science.pdf",
+        "size": 1247390
       }
     ]
   },
