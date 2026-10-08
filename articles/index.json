@@ -366,7 +366,7 @@
   {
     "id": "0cb29d91-5a0d-48a0-981a-2a3bb70cc269",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:47:27.358Z",
+    "updatedAt": "2026-10-08T08:47:44.097Z",
     "title": "Breast Cancer Classification Using Ensemble Deep Learning with RIDOPT-Net",
     "authors": "Ho-Dat Tran; Thuong-Cang Phan; Van-Kha Vo; Anh-Cang Phan",
     "venue": "International Conference on Intelligent Systems and Data Science",
@@ -441,6 +441,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/ac028d00-de0e-4f91-be70-92b717ca4d9f/ISDS - ID 35.pptx",
         "size": 7341928
+      },
+      {
+        "id": "d64c2f80-1d0e-4684-bf09-f5909e0a09c3",
+        "name": "ISDS-ID0035.zip",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/0cb29d91-5a0d-48a0-981a-2a3bb70cc269/d64c2f80-1d0e-4684-bf09-f5909e0a09c3/ISDS-ID0035.zip",
+        "size": 8688119
       }
     ]
   },
