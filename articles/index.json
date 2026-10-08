@@ -641,7 +641,7 @@
   {
     "id": "45576f56-8817-4809-8bed-ac95a4fb0a47",
     "createdAt": "2026-10-08T07:52:03.901Z",
-    "updatedAt": "2026-10-08T08:55:13.228Z",
+    "updatedAt": "2026-10-08T08:55:16.450Z",
     "title": "FGOOPNet: A Fuzzy Deep Learning Approach for Mammographic Breast Cancer Classification",
     "authors": "Ho Dat Tran; Anh Cang Phan; Thuong Cang Phan",
     "venue": "Current Medical Imaging",
@@ -676,6 +676,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/9921ccd3-1188-49da-9ff4-185f3f361057/BMS-CMIM-2025-581 - FGOOPNet A Fuzzy Deep Learning Approach for Mammographic Breast Cancer Classification.pdf",
         "size": 8701580
+      },
+      {
+        "id": "5d0c417c-5c95-41f8-9608-f8430a9052d1",
+        "name": "CMI Journal Q3 - copyright_form.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/45576f56-8817-4809-8bed-ac95a4fb0a47/5d0c417c-5c95-41f8-9608-f8430a9052d1/CMI Journal Q3 - copyright_form.pdf",
+        "size": 92479
       }
     ]
   }
