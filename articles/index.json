@@ -181,6 +181,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/73f981ea-e261-4fe4-a501-40525e6fcc2e/ID 1721 - Licence to Publish.pdf",
         "size": 2201342
+      },
+      {
+        "id": "a66ecd62-e259-4d31-aff3-1b055dc8db88",
+        "name": "ID 1721 - Response.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/75818eaa-77d6-436e-8011-4f638d0de901/a66ecd62-e259-4d31-aff3-1b055dc8db88/ID 1721 - Response.pdf",
+        "size": 145327
       }
     ]
   },
