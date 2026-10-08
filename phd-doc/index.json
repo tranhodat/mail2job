@@ -1,5 +1,23 @@
 [
   {
+    "id": "63e43981-d1d7-434a-9da3-a25bf8bc14da",
+    "title": "Biên bản họp chuyên đề 1",
+    "number": "",
+    "category": "Văn bản",
+    "createdAt": "2026-10-08T09:20:59.760Z",
+    "updatedAt": "2026-10-08T09:20:59.760Z",
+    "files": [
+      {
+        "id": "4fe31340-3fbd-4f02-bf7d-664429f17f12",
+        "name": "BIEN BAN HOP CHUYEN DE 1-NCS Tran Ho Dat.pdf",
+        "type": "application/pdf",
+        "size": 476491,
+        "sha": "6bf1aa813434ed45654990e559049c0a699816d0",
+        "path": "phd-doc/files/63e43981-d1d7-434a-9da3-a25bf8bc14da/4fe31340-3fbd-4f02-bf7d-664429f17f12.pdf"
+      }
+    ]
+  },
+  {
     "id": "1acd2fb1-e55e-46d2-a641-b3db9245deb3",
     "title": "Biên bản họp đánh giá giữa kỳ",
     "number": "",
