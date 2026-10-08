@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "fad6504e-cc95-4a74-bb63-4f8429940b3e",
+    "title": "abc",
+    "number": "dsf",
+    "category": "Văn bản",
+    "createdAt": "2026-10-08T07:58:31.403Z",
+    "updatedAt": "2026-10-08T07:58:31.403Z",
+    "files": [
+      {
+        "id": "0040a199-85e6-4181-8399-bf92e622673e",
+        "name": "so do plot.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        "size": 822774,
+        "path": "documents/files/fad6504e-cc95-4a74-bb63-4f8429940b3e/0040a199-85e6-4181-8399-bf92e622673e-so do plot.docx",
+        "sha": "0e075ee643f24dde29c8bc08e9a880734ea93759"
+      }
+    ]
+  }
+]
