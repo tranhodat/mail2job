@@ -93,6 +93,14 @@
         "type": "application/octet-stream",
         "path": "articles/files/4bbfa5cb-b916-4311-ba14-047f21fde3e1/f6441b8a-73d7-45b8-a3f8-3c03a364b83f/A Novel Proposal for Mammogram Mass Segmentation using an Improved Fuzzy C-means.pdf",
         "size": 4183046
+      },
+      {
+        "id": "f81d7155-6875-484a-abf1-b602edfe32ed",
+        "name": "A NOVEL PROPOSAL FOR MAMMOGRAM MASS SEGMENTATION.rar",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/4bbfa5cb-b916-4311-ba14-047f21fde3e1/f81d7155-6875-484a-abf1-b602edfe32ed/A NOVEL PROPOSAL FOR MAMMOGRAM MASS SEGMENTATION.rar",
+        "size": 4907455
       }
     ]
   },
