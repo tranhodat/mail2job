@@ -46,8 +46,10 @@ Tạo một repository GitHub đã có ít nhất một commit và token có quy
 ### Bài báo nghiên cứu
 Menu **Bài báo** nằm ngay dưới Documents. Hỗ trợ tìm kiếm, sắp xếp, xem bảng/thẻ, thêm/sửa/xóa, nhập/xuất `.xlsx` và tải mẫu Excel. Hộp thoại có bốn tab: thông tin chung (điền từ BibTeX Google Scholar), minh chứng, mã nguồn, ghi chú Markdown và ảnh. Dữ liệu lưu tại `articles/index.json`, tệp tại `articles/files/` trong cùng repository đã cấu hình cho Documents. Gỡ tệp hoặc xóa bài báo giữ nguyên bản tệp trên GitHub.
 
-Mỗi tệp tối đa **20 MB**, tải theo phần 2 MB; cần Redis đã cấu hình để lưu tạm các phần (hết hạn sau một giờ). Nếu tải tệp lỗi, thông tin bài báo đã lưu vẫn được giữ và có thể bấm lưu để thử tiếp. Excel chứa nội dung văn bản, không chứa tệp đính kèm. Nhập Excel tạo các bài báo mới, không ghi đè bài cũ; tối đa 500 bài/lần. Thư viện SheetJS 0.20.3 được lưu tại `public/vendor/xlsx.full.min.js` (Apache-2.0).
+Mỗi tệp tối đa **20 MB**, tải theo phần 1 MB; cần Redis đã cấu hình để lưu tạm các phần (hết hạn sau một giờ). Nếu tải tệp lỗi, thông tin bài báo đã lưu vẫn được giữ và có thể bấm lưu để thử tiếp. Excel chứa nội dung văn bản, không chứa tệp đính kèm. Nhập Excel tạo các bài báo mới, không ghi đè bài cũ; tối đa 500 bài/lần. Thư viện SheetJS 0.20.3 được lưu tại `public/vendor/xlsx.full.min.js` (Apache-2.0).
 
 Documents trên màn hình rộng tối đa 700 px hiển thị ba cột: tên văn bản, dung lượng và thao tác.
 
 Kiểm tra chức năng bằng `node scripts/check-articles.js` (GitHub/Redis giả lập, không ghi dữ liệu thật).
+
+Kiểm tra tải Minh chứng bằng `node scripts/check-evidence-upload.js`: nhiều tệp, tệp vượt giới hạn, mất phản hồi sau khi lưu, hết hạn phần tệp, xung đột cập nhật GitHub và giữ hàng đợi khi chưa tải xong. Tệp vượt 20 MB được báo tên và bỏ qua riêng; các tệp hợp lệ trong cùng lượt kéo vẫn được nhận. Tải gián đoạn được thử lại tối đa ba lần, chỉ bỏ tệp khỏi hàng đợi sau khi máy chủ xác nhận đã lưu.

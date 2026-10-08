@@ -14,5 +14,35 @@ if(req.method!=='POST')return res.status(405).json({error:'Phương thức khôn
 if(act==='save'||act==='import'){let added;try{if(act==='save'&&b.id&&!old)return res.status(404).json({error:'Không tìm thấy bài báo'});const rows=act==='import'?b.items:[b];if(!Array.isArray(rows)||!rows.length||rows.length>500)throw Error('Mỗi lần nhập từ 1 đến 500 bài báo');added=rows.map(r=>clean(r,act==='save'?old:null))}catch(e){return res.status(400).json({error:e.message})}const next=old&&act==='save'?items.map(i=>i.id===old.id?added[0]:i):[...added,...items];await write(next,index.sha);return res.json({items:next,id:added[0].id})}
 if(!old)return res.status(404).json({error:'Không tìm thấy bài báo'});
 if(act==='delete'){const next=items.filter(i=>i.id!==old.id);await write(next,index.sha);return res.json({items:next})}
-if(act==='upload'){const {uploadId,chunk,count,data}=b;if(!/^[a-f0-9-]{36}$/.test(uploadId||'')||!Number.isInteger(chunk)||!Number.isInteger(count)||count<1||count>14||chunk<0||chunk>=count||typeof data!=='string'||data.length>2800000||!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(data))return res.status(400).json({error:'Phần tệp không hợp lệ'});const key=`article-upload:${user}:${b.id}:${uploadId}`;let upload=await U.get(key);if(!upload)upload={parts:[],count,name:String(b.name||'tep').split(/[\\/]/).pop().replace(/[\u0000-\u001f]/g,'').slice(0,180),type:['image/png','image/jpeg','image/gif','image/webp'].includes(b.type)?b.type:'application/octet-stream',role:['evidence','code','note'].includes(b.role)?b.role:'evidence'};if(upload.count!==count)return res.status(400).json({error:'Số phần tệp không khớp'});upload.parts[chunk]=data;await U.set(key,upload);await U.rd('EXPIRE',key,3600);if(Array.from({length:count},(_,i)=>upload.parts[i]).some(p=>typeof p!=='string'))return res.json({pending:true});const bytes=Buffer.concat(upload.parts.map(p=>Buffer.from(p,'base64')));if(bytes.length>20*1024*1024)return res.status(413).json({error:'Mỗi tệp tối đa 20 MB'});const latest=await read(),target=latest.items.find(i=>i.id===b.id);if(!target)return res.status(404).json({error:'Bài báo đã bị xóa'});if(!(target.files||[]).some(f=>f.id===uploadId)){const path=`articles/files/${b.id}/${uploadId}/${upload.name}`;try{await github(`contents/${pathPart(path)}`,'PUT',{message:'Add article attachment',branch:config().branch,content:bytes.toString('base64')})}catch(e){if(e.status!==422)throw e;const existing=await github(`contents/${pathPart(path)}?ref=${encodeURIComponent(config().branch)}`);if(existing.size!==bytes.length)throw e}target.files=[...(target.files||[]),{id:uploadId,name:upload.name,role:upload.role,type:upload.type,path,size:bytes.length}];await write(latest.items,latest.sha)}await U.rd('DEL',key);return res.json({items:latest.items})}
+if(act==='upload'){
+  const {uploadId,chunk,count,data}=b;
+  if(!/^[a-f0-9-]{36}$/.test(uploadId||'')||!Number.isInteger(chunk)||!Number.isInteger(count)||count<1||count>20||chunk<0||chunk>=count||typeof data!=='string'||data.length>2800000||!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(data))return res.status(400).json({error:'Phần tệp không hợp lệ'});
+  // A lost response must not turn a completed upload into a new pending upload.
+  if((old.files||[]).some(f=>f.id===uploadId))return res.json({items});
+  const key=`article-upload:${user}:${b.id}:${uploadId}`;
+  // Store each chunk separately to avoid Redis REST limits on a growing JSON value.
+  const partKey=`${key}:part:${chunk}`;
+  await U.set(partKey,{count,data});await U.rd('EXPIRE',partKey,3600);
+  const parts=await Promise.all(Array.from({length:count},(_,i)=>U.get(`${key}:part:${i}`)));
+  if(parts.some(p=>!p))return res.json({pending:true});
+  if(parts.some(p=>p.count!==count))return res.status(400).json({error:'Số phần tệp không khớp'});
+  const bytes=Buffer.concat(parts.map(p=>Buffer.from(p.data,'base64')));
+  if(bytes.length>20*1024*1024)return res.status(413).json({error:'Mỗi tệp tối đa 20 MB'});
+  const name=String(b.name||'tep').split(/[\\/]/).pop().replace(/[\u0000-\u001f]/g,'').slice(0,180)||'tep';
+  const path=`articles/files/${b.id}/${uploadId}/${name}`,sha=crypto.createHash('sha1').update(Buffer.concat([Buffer.from(`blob ${bytes.length}\0`),bytes])).digest('hex');
+  try{await github(`contents/${pathPart(path)}`,'PUT',{message:'Add article attachment',branch:config().branch,content:bytes.toString('base64')})}
+  catch(e){if(![409,422].includes(e.status))throw e;const existing=await github(`contents/${pathPart(path)}?ref=${encodeURIComponent(config().branch)}`);if(existing.sha!==sha)throw e}
+  const file={id:uploadId,name,role:['evidence','code','note'].includes(b.role)?b.role:'evidence',type:['image/png','image/jpeg','image/gif','image/webp'].includes(b.type)?b.type:'application/octet-stream',path,size:bytes.length};
+  let latest;
+  for(let attempt=0;attempt<3;attempt++){
+    // Read after the file commit and merge with the latest index on conflicts.
+    latest=await read();const target=latest.items.find(i=>i.id===b.id);
+    if(!target)return res.status(404).json({error:'Bài báo đã bị xóa'});
+    if((target.files||[]).some(f=>f.id===uploadId))break;
+    target.files=[...(target.files||[]),file];target.updatedAt=new Date().toISOString();
+    try{await write(latest.items,latest.sha);break}catch(e){if(e.status!==409||attempt===2)throw e}
+  }
+  await Promise.all(Array.from({length:count},(_,i)=>U.rd('DEL',`${key}:part:${i}`)));
+  return res.json({items:latest.items});
+}
 return res.status(400).json({error:'Thao tác không hợp lệ'})});

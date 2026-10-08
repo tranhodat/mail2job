@@ -15,16 +15,74 @@ if(A.tab===1)body=`<h2>Tài liệu đính kèm</h2><p class="sub">Chọn nhiều
 if(A.tab===2)body=`<div class="top">${articleSelect('language',['Python','JavaScript','TypeScript','R','Java','C','C++','MATLAB','SQL','Khác'])}<div class="acts"><button id="article-copy">Sao chép</button><button id="article-code-download">Tải mã nguồn</button></div></div>${articleInput('code',true)}<small id="article-code-count"></small>${articleInput('repository')}${articleInput('requirements',true)}<div class="acts"><button data-add-block="file">＋ Thêm tệp</button><button data-add-block="code">＋ Thêm code</button><button data-add-block="image">＋ Thêm hình ảnh</button><button data-add-block="note">＋ Thêm note</button><button data-add-block="link">＋ Thêm link</button></div>${articleInput('blocks',true)}${articleFileList()}<input id="article-code-files" type="file" multiple class="hide">`;
 if(A.tab===3)body=`<h2>Ghi chú nghiên cứu</h2><div class="acts">${['Đậm','Nghiêng','Tiêu đề','Danh sách','Công việc','Mã','Liên kết'].map((t,i)=>`<button data-note-format="${i}">${t}</button>`).join('')}</div>${articleInput('notes',true)}<pre class="note" id="article-note-preview"></pre><button id="article-note-add">Thêm ghi chú nghiên cứu</button><h2 style="margin-top:20px">Hình ảnh trong ghi chú</h2><button id="article-note-image">Chèn hình ảnh</button><input id="article-note-files" type="file" accept="image/*" multiple class="hide"><p class="sub">Ảnh được lưu cùng bài báo trên GitHub khi lưu.</p>${articleFileList()}${articleInput('references',true)}<small>Mỗi dòng một liên kết tham khảo.</small>`;
 $('#article-dialog').innerHTML=`<div class="dialog-head"><div><h2>${d.id?'Xem / Sửa bài báo':'Bài báo mới'}</h2><small class="sub">Bổ sung thông tin nghiên cứu của bạn</small></div><button data-article-close aria-label="Đóng">×</button></div><div class="article-tabs" role="tablist">${['Thông tin chung','Minh chứng','Mã nguồn','Ghi chú'].map((t,i)=>`<button role="tab" aria-selected="${A.tab===i}" data-article-tab="${i}" class="${A.tab===i?'on':''}">${t}${i===1?' '+(files.length+A.uploads.length):''}</button>`).join('')}</div><div class="dialog-body" role="tabpanel">${body}</div><div class="dialog-foot"><small id="article-save-status">Thông tin bài báo</small><button data-article-close>Hủy</button><button class="p" id="article-save">Lưu thay đổi</button></div>`;
-document.querySelectorAll('[data-af]').forEach(el=>el.oninput=()=>{d[el.dataset.af]=el.value;articleLive()});document.querySelectorAll('[data-article-close]').forEach(b=>b.onclick=()=>{if(!A.busy)$('#article-dialog').close()});document.querySelectorAll('[data-article-tab]').forEach(b=>b.onclick=()=>{A.tab=+b.dataset.articleTab;articleDialog()});document.querySelectorAll('[data-article-remove]').forEach(b=>b.onclick=()=>{d.files=d.files.filter(f=>f.id!==b.dataset.articleRemove);articleDialog()});document.querySelectorAll('[data-upload-remove]').forEach(b=>b.onclick=()=>{A.uploads.splice(+b.dataset.uploadRemove,1);articleDialog()});$('#article-save').onclick=articleSave;
+document.querySelectorAll('[data-af]').forEach(el=>el.oninput=()=>{d[el.dataset.af]=el.value;articleLive()});document.querySelectorAll('[data-article-close]').forEach(b=>b.onclick=()=>{if(!A.busy)$('#article-dialog').close()});document.querySelectorAll('[data-article-tab]').forEach(b=>b.onclick=()=>{A.tab=+b.dataset.articleTab;articleDialog()});document.querySelectorAll('[data-article-remove]').forEach(b=>b.onclick=()=>{d.files=d.files.filter(f=>f.id!==b.dataset.articleRemove);articleDialog()});document.querySelectorAll('[data-upload-remove]').forEach(b=>b.onclick=()=>{A.uploads.splice(+b.dataset.uploadRemove,1);articleDialog()});$('#article-save').onclick=articleSave;$('#article-dialog').oncancel=e=>{if(A.busy)e.preventDefault()};
 if(A.tab===0)$('#article-parse').onclick=()=>{const t=$('#article-bibtex').value;const get=k=>{const m=t.match(new RegExp('\\b'+k+'\\s*=\\s*([{\"])','i'));if(!m)return '';const start=m.index+m[0].length;let depth=1;for(let p=start;p<t.length;p++){if(m[1]==='{'&&t[p]==='{')depth++;if((m[1]==='{'&&t[p]==='}'&&!--depth)||(m[1]==='"'&&t[p]==='"'))return t.slice(start,p).replace(/[{}]/g,'')}return ''};if(!get('title'))return toast('Không tìm thấy tiêu đề BibTeX');for(const [k,b]of Object.entries({title:'title',authors:'author',venue:get('journal')?'journal':'booktitle',year:'year',doi:'doi',page:'pages',issn:get('issn')?'issn':'isbn',abstract:'abstract'})){const v=get(b);if(v)d[k]=k==='authors'?v.replace(/\s+and\s+/g,', '):v}articleDialog()};
-if(A.tab===1){$('#article-files').onchange=e=>articleAddFiles(e.target.files,'evidence');const drop=$('#article-drop');drop.ondragover=e=>{e.preventDefault();drop.classList.add('drag')};drop.ondragleave=()=>drop.classList.remove('drag');drop.ondrop=e=>{e.preventDefault();articleAddFiles(e.dataTransfer.files,'evidence')}}
+if(A.tab===1){$('#article-files').onchange=e=>articleAddFiles(e.target.files,'evidence');const drop=$('#article-drop');drop.ondragover=e=>{e.preventDefault();drop.classList.add('drag')};drop.ondragleave=()=>drop.classList.remove('drag');drop.ondrop=e=>{e.preventDefault();e.stopPropagation();drop.classList.remove('drag');articleAddFiles(Array.from(e.dataTransfer.files),'evidence')}}
 if(A.tab===2){$('#article-copy').onclick=async()=>{try{await navigator.clipboard.writeText(d.code||'');toast('Đã sao chép')}catch(e){toast('Không thể sao chép; hãy chọn mã và sao chép thủ công')}};$('#article-code-download').onclick=()=>articleDownload(d.code||'','source.'+({Python:'py',JavaScript:'js',TypeScript:'ts',R:'r',Java:'java',C:'c','C++':'cpp',MATLAB:'m',SQL:'sql'}[d.language]||'txt'),'text/plain');document.querySelectorAll('[data-add-block]').forEach(b=>b.onclick=()=>{const kind=b.dataset.addBlock;if(['file','image'].includes(kind)){const input=$('#article-code-files');input.accept=kind==='image'?'image/*':'*/*';input.click()}else{d.blocks=(d.blocks||'')+'\n'+({code:'```'+(d.language||'')+'\n\n```',note:'## Ghi chú\n',link:'[Tên liên kết](https://)'}[kind]);articleDialog()}});$('#article-code-files').onchange=e=>articleAddFiles(e.target.files,'code')}
 if(A.tab===3){document.querySelectorAll('[data-note-format]').forEach(b=>b.onclick=()=>{const el=$('#af-notes'),start=el.selectionStart,end=el.selectionEnd,sel=el.value.slice(start,end)||'nội dung',formats=[['**','**'],['*','*'],['## ',''],['- ',''],['- [ ] ',''],['`','`'],['[','](https://)']],f=formats[+b.dataset.noteFormat];el.setRangeText(f[0]+sel+f[1],start,end,'select');d.notes=el.value;articleLive();el.focus()});$('#article-note-add').onclick=()=>{d.notes=(d.notes||'')+'\n\n## Ghi chú nghiên cứu\n';articleDialog()};$('#article-note-image').onclick=()=>$('#article-note-files').click();$('#article-note-files').onchange=e=>articleAddFiles(e.target.files,'note')};articleLive()}
 function articleLive(){const d=A.draft;if($('#article-code-count'))$('#article-code-count').textContent=`${(d.code||'').split('\n').length} dòng · ${(d.code||'').length} ký tự. Mã nguồn được lưu dạng văn bản, không thực thi.`;if($('#article-note-preview'))$('#article-note-preview').textContent=d.notes||'Chưa có ghi chú.'}
 function articleFileList(){return `<div class="doc-file-list">${(A.draft.files||[]).map(f=>`<div class="doc-file-row"><span><a href="/api/articles?act=file&id=${encodeURIComponent(f.id)}">${esc(f.name)}</a>${f.role==='note'&&['image/png','image/jpeg','image/gif','image/webp'].includes(f.type)?`<img class="article-note-photo" alt="${esc(f.name)}" src="/api/articles?act=file&id=${encodeURIComponent(f.id)}&inline=1">`:''} · ${formatBytes(f.size)}</span><button data-article-remove="${esc(f.id)}">Gỡ</button></div>`).join('')}${A.uploads.map((f,i)=>`<div class="doc-file-row"><span>${esc(f.file.name)} · ${formatBytes(f.file.size)} · Chờ tải</span><button data-upload-remove="${i}">Gỡ</button></div>`).join('')||(!(A.draft.files||[]).length?'<p class="empty">Chưa có minh chứng đính kèm.</p>':'')}</div>`}
-function articleAddFiles(files,role){const chosen=[...files];if(chosen.some(f=>f.size>20*1024*1024))return toast('Mỗi tệp tối đa 20 MB');A.uploads.push(...chosen.map(file=>({file,role,id:crypto.randomUUID(),next:0})));articleDialog()}
+function articleAddFiles(files,role){
+  if(A.busy)return;
+  const chosen=Array.from(files),rejected=chosen.filter(f=>f.size>20*1024*1024),accepted=chosen.filter(f=>f.size<=20*1024*1024);
+  A.uploads.push(...accepted.map(file=>({file,role,id:crypto.randomUUID(),next:0})));
+  articleDialog();
+  if(rejected.length)toast('Đã nhận '+accepted.length+' tệp; bỏ qua tệp vượt 20 MB: '+rejected.map(f=>f.name).join(', '));
+  else if(accepted.length)toast('Đã nhận '+accepted.length+' tệp. Nhấn Lưu thay đổi để tải lên.');
+  else toast('Không nhận được tệp. Hãy kéo tệp trực tiếp hoặc bấm để chọn.');
+}
 const articleBase64=blob=>new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(String(r.result).split(',')[1]);r.onerror=()=>reject(Error('Không đọc được tệp'));r.readAsDataURL(blob)});
-async function articleSave(){if(A.busy)return;if(!String(A.draft.title||'').trim()){A.tab=0;articleDialog();$('#af-title').focus();return toast('Vui lòng nhập tiêu đề bài báo')}A.busy=true;const dialog=$('#article-dialog');dialog.querySelectorAll('button,input,textarea,select').forEach(el=>el.disabled=true);try{const result=await api('/api/articles?act=save',{body:{...A.draft,keepFiles:(A.draft.files||[]).map(f=>f.id)}});A.items=result.items;A.draft.id=result.id;const size=2*1024*1024;while(A.uploads.length){const u=A.uploads[0],count=Math.max(1,Math.ceil(u.file.size/size));for(let part=u.next;part<count;part++){$('#article-save-status').textContent=`Đang tải ${u.file.name}: ${part+1}/${count}`;const r=await api('/api/articles?act=upload',{body:{id:A.draft.id,uploadId:u.id,chunk:part,count,name:u.file.name,type:u.file.type,role:u.role,data:await articleBase64(u.file.slice(part*size,(part+1)*size))}});u.next=part+1;if(r.items){A.items=r.items;A.draft.files=r.items.find(i=>i.id===A.draft.id).files}}A.uploads.shift()}dialog.close();articles();toast('Đã lưu bài báo vào GitHub')}catch(e){toast('Lưu chưa hoàn tất: '+e.message);articleDialog()}finally{A.busy=false}}
+async function articleUploadRequest(body){
+  for(let attempt=0;attempt<3;attempt++){
+    try{
+      const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),55000);
+      let response;try{response=await fetch('/api/articles?act=upload',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body),signal:controller.signal})}finally{clearTimeout(timer)}
+      const result=await response.json().catch(()=>({}));
+      if(!response.ok){const error=new Error(result.error||'Lỗi tải tệp '+response.status);error.status=response.status;throw error}
+      return result;
+    }catch(error){
+      if(attempt===2||(error.status&&![408,409,429].includes(error.status)&&error.status<500))throw error;
+      $('#article-save-status').textContent='Kết nối bị gián đoạn, đang thử lại '+body.name+'…';
+      await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));
+    }
+  }
+}
+async function articleSave(){
+  if(A.busy)return;
+  if(!String(A.draft.title||'').trim()){A.tab=0;articleDialog();$('#af-title').focus();return toast('Vui lòng nhập tiêu đề bài báo')}
+  A.busy=true;const dialog=$('#article-dialog');dialog.querySelectorAll('button,input,textarea,select').forEach(el=>el.disabled=true);
+  let failure=null;
+  try{
+    const result=await api('/api/articles?act=save',{body:{...A.draft,keepFiles:(A.draft.files||[]).map(f=>f.id)}});
+    A.items=result.items;A.draft.id=result.id;A.draft.files=result.items.find(i=>i.id===result.id).files;
+    const size=1024*1024,total=A.uploads.length;let completed=0;
+    while(A.uploads.length){
+      const u=A.uploads[0],count=Math.max(1,Math.ceil(u.file.size/size));let confirmed=false;
+      // Replay from the beginning if temporary chunks expired; keep the same file ID.
+      for(let pass=0;pass<2&&!confirmed;pass++){
+        for(let part=u.next;part<count;part++){
+          $('#article-save-status').textContent='Tệp '+(completed+1)+'/'+total+': '+u.file.name+' · '+Math.round((part+1)/count*100)+'%';
+          const r=await articleUploadRequest({id:A.draft.id,uploadId:u.id,chunk:part,count,name:u.file.name,type:u.file.type,role:u.role,data:await articleBase64(u.file.slice(part*size,(part+1)*size))});
+          const target=r.items?.find(i=>i.id===A.draft.id);
+          if(target?.files?.some(f=>f.id===u.id)){A.items=r.items;A.draft.files=target.files;confirmed=true;break}
+          if(!r.pending)throw Error('Máy chủ chưa xác nhận tệp '+u.file.name);
+          u.next=part+1;
+        }
+        if(!confirmed)u.next=0;
+      }
+      if(!confirmed)throw Error('Chưa nhận đủ các phần của tệp '+u.file.name+'. Hãy bấm lưu để thử lại.');
+      A.uploads.shift();completed++;
+    }
+    dialog.close();articles();toast('Đã lưu bài báo và toàn bộ minh chứng vào GitHub');
+  }catch(e){
+    failure=e;
+    // Reconcile files that reached GitHub even when their response was lost.
+    if(A.draft.id){try{const latest=await api('/api/articles');const target=latest.items.find(i=>i.id===A.draft.id);if(target){A.items=latest.items;A.draft.files=target.files;const saved=new Set(target.files.map(f=>f.id));A.uploads=A.uploads.filter(u=>!saved.has(u.id))}}catch{}}
+  }finally{
+    A.busy=false;
+    if(failure){articleDialog();$('#article-save-status').textContent='Còn '+A.uploads.length+' tệp chưa tải. Bấm Lưu thay đổi để thử lại.';toast('Lưu chưa hoàn tất: '+failure.message)}
+  }
+}
 
 function articleMarkdown(value){return esc(value).replace(/^### (.+)$/gm,'<h4>$1</h4>').replace(/^## (.+)$/gm,'<h3>$1</h3>').replace(/^# (.+)$/gm,'<h2>$1</h2>').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*([^*\n]+)\*/g,'<em>$1</em>').replace(/`([^`\n]+)`/g,'<code>$1</code>').replace(/^- \[ \] /gm,'☐ ').replace(/^- \[x\] /gmi,'☑ ').replace(/^- /gm,'• ')}
 
