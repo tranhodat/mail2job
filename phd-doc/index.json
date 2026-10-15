@@ -1,5 +1,23 @@
 [
   {
+    "id": "849f9e9d-66f3-4ab6-87f0-1810d9b047a6",
+    "title": "Quyết định hội đồng seminar toàn luận án",
+    "number": "5870 - Ngày 8/10/2026",
+    "category": "Quyết định",
+    "createdAt": "2026-10-15T00:18:23.880Z",
+    "updatedAt": "2026-10-15T00:18:23.880Z",
+    "files": [
+      {
+        "id": "3b32f597-2d62-4498-ade1-6f5b0b653890",
+        "name": "5870-HTTT-QD seminar Tran Ho Dat.signed.signed.signed.signed.pdf",
+        "type": "application/pdf",
+        "size": 637297,
+        "sha": "cacf8fd8cfaf29e484c61bec18d85a8152a11654",
+        "path": "phd-doc/files/849f9e9d-66f3-4ab6-87f0-1810d9b047a6/3b32f597-2d62-4498-ade1-6f5b0b653890.pdf"
+      }
+    ]
+  },
+  {
     "id": "43599d85-bbbe-4460-916a-4fd4572b51b7",
     "title": "Phiếu đăng ký gia hạn NCS",
     "number": "",
