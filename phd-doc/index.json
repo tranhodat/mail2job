@@ -1,5 +1,23 @@
 [
   {
+    "id": "40b2bee3-f0f5-4ced-aa6d-299bd5d03c09",
+    "title": "Biên bản họp seminar Toàn luận án",
+    "number": "",
+    "category": "Văn bản",
+    "createdAt": "2026-10-16T11:07:38.282Z",
+    "updatedAt": "2026-10-16T11:07:38.282Z",
+    "files": [
+      {
+        "id": "c6cf3e9d-cd58-4836-9f3e-0d0305dad5dd",
+        "name": "Bien ban danh gia seminar LATS-NCS Tran Ho Dat.pdf",
+        "type": "application/pdf",
+        "size": 1041394,
+        "sha": "a20939e7e83c9c5eee46fac2d5f9ced00627936b",
+        "path": "phd-doc/files/40b2bee3-f0f5-4ced-aa6d-299bd5d03c09/c6cf3e9d-cd58-4836-9f3e-0d0305dad5dd.pdf"
+      }
+    ]
+  },
+  {
     "id": "849f9e9d-66f3-4ab6-87f0-1810d9b047a6",
     "title": "Quyết định hội đồng seminar toàn luận án",
     "number": "5870 - Ngày 8/10/2026",
