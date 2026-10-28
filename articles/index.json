@@ -2,7 +2,7 @@
   {
     "id": "359d82e1-4f38-40e1-9a68-f97ae5c3e78f",
     "createdAt": "2026-10-28T13:41:39.158Z",
-    "updatedAt": "2026-10-28T13:41:39.158Z",
+    "updatedAt": "2026-10-28T13:41:44.732Z",
     "title": "NFTransUNet: A Neuro-Fuzzy Deep Learning Model for Breast Tumor Segmentation in Big Data Environment",
     "authors": "Tran, Ho-Dat, Phan, Thuong-Cang, Bui, Ngoc-Thuan, Nguyen, Vinh-Phong, Phan, Anh-Cang",
     "venue": "International Conference on Multi-disciplinary Trends in Artificial Intelligence",
@@ -21,7 +21,16 @@
     "notes": "",
     "references": "",
     "blocks": "",
-    "files": []
+    "files": [
+      {
+        "id": "9d778c8f-a0b8-4540-bd64-624b62ae6ff2",
+        "name": "ID141.pdf",
+        "role": "evidence",
+        "type": "application/octet-stream",
+        "path": "articles/files/359d82e1-4f38-40e1-9a68-f97ae5c3e78f/9d778c8f-a0b8-4540-bd64-624b62ae6ff2/file.pdf",
+        "size": 579055
+      }
+    ]
   },
   {
     "id": "fca78acb-981e-42b0-8ca1-e477cfbd167d",
