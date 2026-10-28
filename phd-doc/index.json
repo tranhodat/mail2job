@@ -1,5 +1,23 @@
 [
   {
+    "id": "2972c3b7-fefc-49a4-a2ac-becdb51bb58b",
+    "title": "Xác nhận trùng lắp luận án",
+    "number": "",
+    "category": "Văn bản",
+    "createdAt": "2026-10-28T13:32:45.154Z",
+    "updatedAt": "2026-10-28T13:32:45.154Z",
+    "files": [
+      {
+        "id": "f070c17b-a6e4-4748-8c75-cbc3294a3cef",
+        "name": "1228_BM03-NXBDHCT-XacnhanKetQua_TranHoDat_P1623008_CHECK DAO VAN.pdf",
+        "type": "application/pdf",
+        "size": 1573509,
+        "sha": "54c12eb78010a7c839d8c8ba70e0015987b83805",
+        "path": "phd-doc/files/2972c3b7-fefc-49a4-a2ac-becdb51bb58b/f070c17b-a6e4-4748-8c75-cbc3294a3cef.pdf"
+      }
+    ]
+  },
+  {
     "id": "40b2bee3-f0f5-4ced-aa6d-299bd5d03c09",
     "title": "Biên bản họp seminar Toàn luận án",
     "number": "",
